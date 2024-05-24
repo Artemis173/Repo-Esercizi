@@ -4,3 +4,4 @@ class Product:
         self.quantity: int = quantity
 
 class Warehouse:
+    def add_product()
