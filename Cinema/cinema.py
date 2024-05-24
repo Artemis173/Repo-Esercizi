@@ -42,5 +42,5 @@ cinema.add_cinema_room(cinema_room_orion)
 cinema.add_cinema_room(cinema_room_ares)
 
 print(cinema.book_film("Barbie", 20))
-print(cinema.book_film("Oppenheimer", 12))
+print(cinema.book_film("Oppenheimer", 72))
 print(cinema.book_film("The Creator", 4))
