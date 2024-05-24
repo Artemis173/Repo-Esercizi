@@ -5,3 +5,4 @@ class Product:
 
 class Warehouse:
     def add_product():
+        pass
