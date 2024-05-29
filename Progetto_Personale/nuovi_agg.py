@@ -437,6 +437,6 @@ def main():
     color_choice = ask_questions(color_class, answers)
     final_result = ask_final_questions(final_question_trees[color_choice], answers)
     print(final_result)
-    
+
 if __name__ == "__main__":
     main()
