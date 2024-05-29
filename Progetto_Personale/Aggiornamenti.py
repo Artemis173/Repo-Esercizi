@@ -10,8 +10,11 @@ def ask_questions(node, answers, prev_node=None):
         answer = input("Risposta non valida. Inserisci il numero della tua risposta: ")
 
     answer_index = int(answer) - 1
-    answers.append(answer_index)
     next_node = node['options'][answer_index]
+
+    # Non aggiungere risposte a "Sei sicuro?"
+    if node['question'] != "Sei sicuro?":
+        answers.append(next_node['text'])
 
     if 'next' in next_node:
         return ask_questions(next_node['next'], answers, node)
@@ -19,7 +22,7 @@ def ask_questions(node, answers, prev_node=None):
         return next_node['result']
     else:
         if next_node['text'].lower() == "no":
-            answers.pop()
+            if answers: answers.pop()  # Rimuove l'ultima risposta (il "no")
             return ask_questions(prev_node, answers)
         else:
             return ask_questions(next_node, answers)
@@ -36,42 +39,11 @@ def ask_single_question(question_node, answers):
     choice = question_node['options'][answer_index]['result']
     answers.append(choice)
 
+
 def calculate_result(answers):
     return "Risultato finale basato sulle risposte."
 
 def main():
-    # Domande iniziali
-    initial_questions = [
-        {
-            'question': "Ti senti più legato al corpo o allo spirito?",
-            'options': [
-                {'text': "Corpo", 'result': 'corpo'},
-                {'text': "Spirito", 'result': 'spirito'}
-            ]
-        },
-        {
-            'question': "Preferisci la città o la campagna?",
-            'options': [
-                {'text': "Città", 'result': 'città'},
-                {'text': "Campagna", 'result': 'campagna'}
-            ]
-        },
-        {
-            'question': "Ti piace più il mare o la montagna?",
-            'options': [
-                {'text': "Mare", 'result': 'mare'},
-                {'text': "Montagna", 'result': 'montagna'}
-            ]
-        },
-        {
-            'question': "Preferisci leggere libri o guardare film?",
-            'options': [
-                {'text': "Libri", 'result': 'libri'},
-                {'text': "Film", 'result': 'film'}
-            ]
-        }
-    ]
-
     # Struttura ad albero delle domande
     color_class = {
         'question': "Qual è il colore che ti piace di più?",
@@ -196,16 +168,51 @@ def main():
         ]
     }
 
+    #Domande Generali
+    general_questions = [
+        {
+            'question': "Ti senti più legato al corpo o allo spirito?",
+            'options': [
+                {'text': "Corpo", 'result': 'corpo'},
+                {'text': "Spirito", 'result': 'spirito'}
+            ]
+        },
+        {
+            'question': "Preferisci la città o la campagna?",
+            'options': [
+                {'text': "Città", 'result': 'città'},
+                {'text': "Campagna", 'result': 'campagna'}
+            ]
+        },
+        {
+            'question': "Ti piace più il mare o la montagna?",
+            'options': [
+                {'text': "Mare", 'result': 'mare'},
+                {'text': "Montagna", 'result': 'montagna'}
+            ]
+        },
+        {
+            'question': "Preferisci leggere libri o guardare film?",
+            'options': [
+                {'text': "Libri", 'result': 'libri'},
+                {'text': "Film", 'result': 'film'}
+            ]
+        }
+    ]
     print("Benvenuto al questionario!\n")
     answers = []
-
-    # Fare le domande iniziali
-    for question in initial_questions:
-        ask_single_question(question, answers)
 
     # Continuare con l'albero delle domande
     result = ask_questions(color_class, answers)
     print(f"\nIl tuo risultato è: {result}")
+    print(f"\nLe tue risposte sono: {answers}")
+    
+    # Fare le domande iniziali
+    for question in general_questions:
+        ask_single_question(question, answers)
+    print(answers)
+
+    
 
 if __name__ == "__main__":
     main()
