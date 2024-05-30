@@ -294,73 +294,96 @@ def main():
             }
         },
         "Giallo": {
-            'question': "Quale attività preferisci?",
-            'options': [
-                {'text': "Sportiva", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'next': {
-                            'question': "Quale sport preferisci?",
-                            'options': [
-                                {'text': "Calcio", 'result': "Calcio"},
-                                {'text': "Basket", 'result': "Basket"},
-                                {'text': "Nuoto", 'result': "Nuoto"},
-                                {'text': "Ciclismo", 'result': "Ciclismo"},
-                                {'text': "Altro", 'result': "Altro"}
-                            ]
-                        }},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Creativa", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'next': {
-                            'question': "Quale attività creativa preferisci?",
-                            'options': [
-                                {'text': "Pittura", 'result': "Pittura"},
-                                {'text': "Scrittura", 'result': "Scrittura"},
-                                {'text': "Musica", 'result': "Musica"},
-                                {'text': "Fotografia", 'result': "Fotografia"},
-                                {'text': "Altro", 'result': "Altro"}
-                            ]
-                        }},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Culturale", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'next': {
-                            'question': "Quale attività culturale preferisci?",
-                            'options': [
-                                {'text': "Visite a musei", 'result': "Visite a musei"},
-                                {'text': "Lettura di libri", 'result': "Lettura di libri"},
-                                {'text': "Frequentare concerti", 'result': "Frequentare concerti"},
-                                {'text': "Guardare film", 'result': "Guardare film"},
-                                {'text': "Altro", 'result': "Altro"}
-                            ]
-                        }},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Rilassante", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'next': {
-                            'question': "Quale attività rilassante preferisci?",
-                            'options': [
-                                {'text': "Yoga", 'result': "Yoga"},
-                                {'text': "Meditazione", 'result': "Meditazione"},
-                                {'text': "Escursioni in natura", 'result': "Escursioni in natura"},
-                                {'text': "Bagno caldo", 'result': "Bagno caldo"},
-                                {'text': "Altro", 'result': "Altro"}
-                            ]
-                        }},
-                        {'text': "No"}
-                    ]
-                }}
-            ]
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
+            "options": [
+                {"text": "a) Mantengo la calma e cerco una soluzione strutturata. (Ordine)"},
+                {"text": "b) Cerco di capire le radici del problema e le sue cause. (Origine)"},
+                {"text": "c) Mi concentro sul trovare una soluzione pratica e realistica. (Realtà)"},
+                {"text": "d) Mi adatto alla situazione e cerco di risolvere il problema in modo flessibile. (Nessuno)"},
+                {"text": "e) Utilizzo una combinazione di approcci diversi a seconda del contesto. (Tutti)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                "options": [
+                    {"text": "a) Organizzare attività strutturate e pianificate. (Ordine)"},
+                    {"text": "b) Esplorare nuove culture e tradizioni. (Origine)"},
+                    {"text": "c) Svolgere attività pratiche e coinvolgenti. (Realtà)"},
+                    {"text": "d) Fare quello che mi piace in quel momento senza un piano preciso. (Nessuno)"},
+                    {"text": "e) Fare una varietà di attività che mi interessano. (Tutti)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione di conflitti?",
+                    "options": [
+                        {"text": "a) Cerco di mantenere la calma e risolvere la situazione in modo ordinato. (Ordine)"},
+                        {"text": "b) Cerco di capire le cause profonde del conflitto. (Origine)"},
+                        {"text": "c) Cerco soluzioni pratiche per risolvere il conflitto. (Realtà)"},
+                        {"text": "d) Adotto un approccio flessibile e cerco il compromesso. (Nessuno)"},
+                        {"text": "e) Cerco di trovare un equilibrio tra le varie parti coinvolte. (Tutti)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        "options": [
+                            {"text": "a) La struttura e la chiarezza del messaggio. (Ordine)"},
+                            {"text": "b) La profondità dei temi e la storia. (Origine)"},
+                            {"text": "c) La concretezza e l'applicabilità delle informazioni. (Realtà)"},
+                            {"text": "d) La varietà di punti di vista e stili narrativi. (Nessuno)"},
+                            {"text": "e) La ricchezza e la diversità delle esperienze descritte. (Tutti)"}
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti con una parola?",
+                            "options": [
+                                {"text": "a) Organizzato. (Ordine)"},
+                                {"text": "b) Profondo. (Origine)"},
+                                {"text": "c) Pragmatico. (Realtà)"},
+                                {"text": "d) Flessibile. (Nessuno)"},
+                                {"text": "e) Versatile. (Tutti)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                "options": [
+                                    {"text": "a) Un ambiente organizzato e strutturato. (Ordine)"},
+                                    {"text": "b) Un ambiente ricco di storia e significato. (Origine)"},
+                                    {"text": "c) Un ambiente pratico e funzionale. (Realtà)"},
+                                    {"text": "d) Un ambiente flessibile e adattabile. (Nessuno)"},
+                                    {"text": "e) Un ambiente dinamico e inclusivo. (Tutti)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più?",
+                                    "options": [
+                                        {"text": "a) Il raggiungimento degli obiettivi prefissati. (Ordine)"},
+                                        {"text": "b) La ricerca di significati profondi e di connessioni. (Origine)"},
+                                        {"text": "c) Il raggiungimento di risultati concreti. (Realtà)"},
+                                        {"text": "d) L'adattamento e la flessibilità. (Nessuno)"},
+                                        {"text": "e) L'esplorazione di nuove opportunità e esperienze. (Tutti)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        "options": [
+                                            {"text": "a) Seguendo una routine ben strutturata. (Ordine)"},
+                                            {"text": "b) Esplorando nuovi luoghi o idee. (Origine)"},
+                                            {"text": "c) Svolgendo attività pratiche o sociali. (Realtà)"},
+                                            {"text": "d) Lasciandomi guidare dall'istinto e dalle circostanze. (Nessuno)"},
+                                            {"text": "e) Proponendo o partecipando a varie attività. (Tutti)"}
+                                        ],
+                                        'next': {
+                                            'question': "Qual è la tua visione della felicità?",
+                                            "options": [
+                                                {"text": "a) Vedere il mondo come un luogo ordinato e regolato da regole. (Ordine)"},
+                                                {"text": "b) Vedere il mondo come un luogo ricco di storia e significati profondi. (Origine)"},
+                                                {"text": "c) Vedere il mondo come un luogo dove la realtà e i fatti concreti sono importanti. (Realtà)"},
+                                                {"text": "d) Vedere il mondo come un luogo in costante cambiamento e adattamento. (Nessuno)"},
+                                                {"text": "e) Vedere il mondo come un luogo complesso e interconnesso. (Tutti)"}
+                                            ],
+                                            'result': ""
+                                        }                                  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
         },
         "Blu": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
@@ -554,24 +577,188 @@ def main():
             }
         },
         "Arancio-Giallo": {
-            'question': "Qual è il tuo cibo preferito?",
-            'options': [
-                {'text': "Pizza", 'result': "Pizza"},
-                {'text': "Pasta", 'result': "Pasta"},
-                {'text': "Sushi", 'result': "Sushi"},
-                {'text': "Hamburger", 'result': "Hamburger"},
-                {'text': "Insalata", 'result': "Insalata"}
-            ]
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
+            "options": [
+                {"text": "a) Mantengo la calma e cerco una soluzione strutturata. (Ordine)"},
+                {"text": "b) Cerco di capire le radici del problema e le sue cause. (Origine)"},
+                {"text": "c) Mi concentro sul trovare una soluzione pratica e realistica. (Realtà)"},
+                {"text": "d) Mi adatto alla situazione e cerco di risolvere il problema in modo flessibile. (Nessuno)"},
+                {"text": "e) Utilizzo una combinazione di approcci diversi a seconda del contesto. (Tutti)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                "options": [
+                    {"text": "a) Organizzare attività strutturate e pianificate. (Ordine)"},
+                    {"text": "b) Esplorare nuove culture e tradizioni. (Origine)"},
+                    {"text": "c) Svolgere attività pratiche e coinvolgenti. (Realtà)"},
+                    {"text": "d) Fare quello che mi piace in quel momento senza un piano preciso. (Nessuno)"},
+                    {"text": "e) Fare una varietà di attività che mi interessano. (Tutti)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione di conflitti?",
+                    "options": [
+                        {"text": "a) Cerco di mantenere la calma e risolvere la situazione in modo ordinato. (Ordine)"},
+                        {"text": "b) Cerco di capire le cause profonde del conflitto. (Origine)"},
+                        {"text": "c) Cerco soluzioni pratiche per risolvere il conflitto. (Realtà)"},
+                        {"text": "d) Adotto un approccio flessibile e cerco il compromesso. (Nessuno)"},
+                        {"text": "e) Cerco di trovare un equilibrio tra le varie parti coinvolte. (Tutti)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        "options": [
+                            {"text": "a) La struttura e la chiarezza del messaggio. (Ordine)"},
+                            {"text": "b) La profondità dei temi e la storia. (Origine)"},
+                            {"text": "c) La concretezza e l'applicabilità delle informazioni. (Realtà)"},
+                            {"text": "d) La varietà di punti di vista e stili narrativi. (Nessuno)"},
+                            {"text": "e) La ricchezza e la diversità delle esperienze descritte. (Tutti)"}
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti con una parola?",
+                            "options": [
+                                {"text": "a) Organizzato. (Ordine)"},
+                                {"text": "b) Profondo. (Origine)"},
+                                {"text": "c) Pragmatico. (Realtà)"},
+                                {"text": "d) Flessibile. (Nessuno)"},
+                                {"text": "e) Versatile. (Tutti)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                "options": [
+                                    {"text": "a) Un ambiente organizzato e strutturato. (Ordine)"},
+                                    {"text": "b) Un ambiente ricco di storia e significato. (Origine)"},
+                                    {"text": "c) Un ambiente pratico e funzionale. (Realtà)"},
+                                    {"text": "d) Un ambiente flessibile e adattabile. (Nessuno)"},
+                                    {"text": "e) Un ambiente dinamico e inclusivo. (Tutti)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più?",
+                                    "options": [
+                                        {"text": "a) Il raggiungimento degli obiettivi prefissati. (Ordine)"},
+                                        {"text": "b) La ricerca di significati profondi e di connessioni. (Origine)"},
+                                        {"text": "c) Il raggiungimento di risultati concreti. (Realtà)"},
+                                        {"text": "d) L'adattamento e la flessibilità. (Nessuno)"},
+                                        {"text": "e) L'esplorazione di nuove opportunità e esperienze. (Tutti)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        "options": [
+                                            {"text": "a) Seguendo una routine ben strutturata. (Ordine)"},
+                                            {"text": "b) Esplorando nuovi luoghi o idee. (Origine)"},
+                                            {"text": "c) Svolgendo attività pratiche o sociali. (Realtà)"},
+                                            {"text": "d) Lasciandomi guidare dall'istinto e dalle circostanze. (Nessuno)"},
+                                            {"text": "e) Proponendo o partecipando a varie attività. (Tutti)"}
+                                        ],
+                                        'next': {
+                                            'question': "Qual è la tua visione della felicità?",
+                                            "options": [
+                                                {"text": "a) Vedere il mondo come un luogo ordinato e regolato da regole. (Ordine)"},
+                                                {"text": "b) Vedere il mondo come un luogo ricco di storia e significati profondi. (Origine)"},
+                                                {"text": "c) Vedere il mondo come un luogo dove la realtà e i fatti concreti sono importanti. (Realtà)"},
+                                                {"text": "d) Vedere il mondo come un luogo in costante cambiamento e adattamento. (Nessuno)"},
+                                                {"text": "e) Vedere il mondo come un luogo complesso e interconnesso. (Tutti)"}
+                                            ],
+                                            'result': ""
+                                        }                                  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
         },
         "Verde-Giallo": {
-            'question': "Qual è il tuo animale preferito?",
-            'options': [
-                {'text': "Cane", 'result': "Cane"},
-                {'text': "Gatto", 'result': "Gatto"},
-                {'text': "Uccello", 'result': "Uccello"},
-                {'text': "Pesce", 'result': "Pesce"},
-                {'text': "Coniglio", 'result': "Coniglio"}
-            ]
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
+            "options": [
+                {"text": "a) Mantengo la calma e cerco una soluzione strutturata. (Ordine)"},
+                {"text": "b) Cerco di capire le radici del problema e le sue cause. (Origine)"},
+                {"text": "c) Mi concentro sul trovare una soluzione pratica e realistica. (Realtà)"},
+                {"text": "d) Mi adatto alla situazione e cerco di risolvere il problema in modo flessibile. (Nessuno)"},
+                {"text": "e) Utilizzo una combinazione di approcci diversi a seconda del contesto. (Tutti)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                "options": [
+                    {"text": "a) Organizzare attività strutturate e pianificate. (Ordine)"},
+                    {"text": "b) Esplorare nuove culture e tradizioni. (Origine)"},
+                    {"text": "c) Svolgere attività pratiche e coinvolgenti. (Realtà)"},
+                    {"text": "d) Fare quello che mi piace in quel momento senza un piano preciso. (Nessuno)"},
+                    {"text": "e) Fare una varietà di attività che mi interessano. (Tutti)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione di conflitti?",
+                    "options": [
+                        {"text": "a) Cerco di mantenere la calma e risolvere la situazione in modo ordinato. (Ordine)"},
+                        {"text": "b) Cerco di capire le cause profonde del conflitto. (Origine)"},
+                        {"text": "c) Cerco soluzioni pratiche per risolvere il conflitto. (Realtà)"},
+                        {"text": "d) Adotto un approccio flessibile e cerco il compromesso. (Nessuno)"},
+                        {"text": "e) Cerco di trovare un equilibrio tra le varie parti coinvolte. (Tutti)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        "options": [
+                            {"text": "a) La struttura e la chiarezza del messaggio. (Ordine)"},
+                            {"text": "b) La profondità dei temi e la storia. (Origine)"},
+                            {"text": "c) La concretezza e l'applicabilità delle informazioni. (Realtà)"},
+                            {"text": "d) La varietà di punti di vista e stili narrativi. (Nessuno)"},
+                            {"text": "e) La ricchezza e la diversità delle esperienze descritte. (Tutti)"}
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti con una parola?",
+                            "options": [
+                                {"text": "a) Organizzato. (Ordine)"},
+                                {"text": "b) Profondo. (Origine)"},
+                                {"text": "c) Pragmatico. (Realtà)"},
+                                {"text": "d) Flessibile. (Nessuno)"},
+                                {"text": "e) Versatile. (Tutti)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                "options": [
+                                    {"text": "a) Un ambiente organizzato e strutturato. (Ordine)"},
+                                    {"text": "b) Un ambiente ricco di storia e significato. (Origine)"},
+                                    {"text": "c) Un ambiente pratico e funzionale. (Realtà)"},
+                                    {"text": "d) Un ambiente flessibile e adattabile. (Nessuno)"},
+                                    {"text": "e) Un ambiente dinamico e inclusivo. (Tutti)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più?",
+                                    "options": [
+                                        {"text": "a) Il raggiungimento degli obiettivi prefissati. (Ordine)"},
+                                        {"text": "b) La ricerca di significati profondi e di connessioni. (Origine)"},
+                                        {"text": "c) Il raggiungimento di risultati concreti. (Realtà)"},
+                                        {"text": "d) L'adattamento e la flessibilità. (Nessuno)"},
+                                        {"text": "e) L'esplorazione di nuove opportunità e esperienze. (Tutti)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        "options": [
+                                            {"text": "a) Seguendo una routine ben strutturata. (Ordine)"},
+                                            {"text": "b) Esplorando nuovi luoghi o idee. (Origine)"},
+                                            {"text": "c) Svolgendo attività pratiche o sociali. (Realtà)"},
+                                            {"text": "d) Lasciandomi guidare dall'istinto e dalle circostanze. (Nessuno)"},
+                                            {"text": "e) Proponendo o partecipando a varie attività. (Tutti)"}
+                                        ],
+                                        'next': {
+                                            'question': "Qual è la tua visione della felicità?",
+                                            "options": [
+                                                {"text": "a) Vedere il mondo come un luogo ordinato e regolato da regole. (Ordine)"},
+                                                {"text": "b) Vedere il mondo come un luogo ricco di storia e significati profondi. (Origine)"},
+                                                {"text": "c) Vedere il mondo come un luogo dove la realtà e i fatti concreti sono importanti. (Realtà)"},
+                                                {"text": "d) Vedere il mondo come un luogo in costante cambiamento e adattamento. (Nessuno)"},
+                                                {"text": "e) Vedere il mondo come un luogo complesso e interconnesso. (Tutti)"}
+                                            ],
+                                            'result': ""
+                                        }                                  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
         },
         "Verde-Blu": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
@@ -893,8 +1080,18 @@ def main():
     print(color_choice)
     ask_final_questions(final_question_trees[color_choice], answers)
     print(answers)
-    if answers[1] == 'Blu': 
-        print()
+    if answers[1] in ['Rosso', 'Arancio-Rosso', 'Viola-Rosso']:
+        print("Fuoco ",answers.count("1"),"\nAcqua ",answers.count("2"),
+          "\nTerra ",answers.count("3"),"\nAria ",answers.count("4"),
+          "\nCristallo ",answers.count("5"))
+    elif answers[1] in ['Giallo', 'Arancio-Giallo', 'Verde-Giallo']:
+        print("Ordine ",answers.count("1"),"\nOrigine ",answers.count("2"),
+          "\nRealtà ",answers.count("3"),"\nNessuno ",answers.count("4"),
+          "\nTutti ",answers.count("5"))
+    elif answers[1] in ['Blu', 'Verde-Blu', 'Viola-Blu']: 
+        print("Mente ",answers.count("1"),"\nVita ",answers.count("2"),
+          "\nVuoto ",answers.count("3"),"\nLuce ",answers.count("4"),
+          "\nOscurità ",answers.count("5"))
     else:
         print("Fuoco ",answers.count("1"),"\nAcqua ",answers.count("2"),
           "\nTerra ",answers.count("3"),"\nAria ",answers.count("4"),
