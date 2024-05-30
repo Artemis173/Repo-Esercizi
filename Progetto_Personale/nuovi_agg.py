@@ -502,7 +502,7 @@ def main():
                 }
             }
         },
-        "Arancio": {
+        "Arancio-Giallo": {
             'question': "Qual è il tuo cibo preferito?",
             'options': [
                 {'text': "Pizza", 'result': "Pizza"},
@@ -512,7 +512,17 @@ def main():
                 {'text': "Insalata", 'result': "Insalata"}
             ]
         },
-        "Verde": {
+        "Verde-Giallo": {
+            'question': "Qual è il tuo animale preferito?",
+            'options': [
+                {'text': "Cane", 'result': "Cane"},
+                {'text': "Gatto", 'result': "Gatto"},
+                {'text': "Uccello", 'result': "Uccello"},
+                {'text': "Pesce", 'result': "Pesce"},
+                {'text': "Coniglio", 'result': "Coniglio"}
+            ]
+        },
+        "Verde-Blu": {
             'question': "Qual è il tuo animale preferito?",
             'options': [
                 {'text': "Cane", 'result': "Cane"},
@@ -622,7 +632,7 @@ def main():
                 }
             }
         },
-        "Viola": {
+        "Viola-Blu": {
             'question': "Quale è la tua bevanda preferita?",
             'options': [
                 {'text': "Caffè", 'result': "Caffè"},
