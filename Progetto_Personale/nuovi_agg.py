@@ -73,21 +73,21 @@ def main():
             {'text': "Rosso", 'next': {
                 'question': "Sei sicuro?",
                 'options': [
-                    {'text': "Sì", 'result': "Hai scelto Rosso"},
+                    {'text': "Sì", 'result': "Rosso"},
                     {'text': "No"}
                 ]
             }},
             {'text': "Giallo", 'next': {
                 'question': "Sei sicuro?",
                 'options': [
-                    {'text': "Sì", 'result': "Hai scelto Giallo"},
+                    {'text': "Sì", 'result': "Giallo"},
                     {'text': "No"}
                 ]
             }},
             {'text': "Blu", 'next': {
                 'question': "Sei sicuro?",
                 'options': [
-                    {'text': "Sì", 'result': "Hai scelto Blu"},
+                    {'text': "Sì", 'result': "Blu"},
                     {'text': "No"}
                 ]
             }},
@@ -100,14 +100,14 @@ def main():
                             {'text': "Rosso", 'next': {
                                 'question': "Sei sicuro?",
                                 'options': [
-                                    {'text': "Sì", 'result': "Hai scelto Arancio con preferenza Rosso"},
+                                    {'text': "Sì", 'result': "Arancio-Rosso"},
                                     {'text': "No"}
                                 ]
                             }},
                             {'text': "Giallo", 'next': {
                                 'question': "Sei sicuro?",
                                 'options': [
-                                    {'text': "Sì", 'result': "Hai scelto Arancio con preferenza Giallo"},
+                                    {'text': "Sì", 'result': "Arancio-Giallo"},
                                     {'text': "No"}
                                 ]
                             }}
@@ -125,14 +125,14 @@ def main():
                             {'text': "Giallo", 'next': {
                                 'question': "Sei sicuro?",
                                 'options': [
-                                    {'text': "Sì", 'result': "Hai scelto Verde con preferenza Giallo"},
+                                    {'text': "Sì", 'result': "Verde-Giallo"},
                                     {'text': "No"}
                                 ]
                             }},
                             {'text': "Blu", 'next': {
                                 'question': "Sei sicuro?",
                                 'options': [
-                                    {'text': "Sì", 'result': "Hai scelto Verde con preferenza Blu"},
+                                    {'text': "Sì", 'result': "Verde-Blu"},
                                     {'text': "No"}
                                 ]
                             }}
@@ -150,14 +150,14 @@ def main():
                             {'text': "Rosso", 'next': {
                                 'question': "Sei sicuro?",
                                 'options': [
-                                    {'text': "Sì", 'result': "Hai scelto Viola con preferenza Rosso"},
+                                    {'text': "Sì", 'result': "Viola-Rosso"},
                                     {'text': "No"}
                                 ]
                             }},
                             {'text': "Blu", 'next': {
                                 'question': "Sei sicuro?",
                                 'options': [
-                                    {'text': "Sì", 'result': "Hai scelto Viola con preferenza Blu"},
+                                    {'text': "Sì", 'result': "Viola-Blu"},
                                     {'text': "No"}
                                 ]
                             }}
@@ -169,21 +169,21 @@ def main():
             {'text': "Bianco", 'next': {
                 'question': "Sei sicuro?",
                 'options': [
-                    {'text': "Sì", 'result': "Hai scelto Bianco"},
+                    {'text': "Sì", 'result': "Bianco"},
                     {'text': "No"}
                 ]
             }},
             {'text': "Grigio", 'next': {
                 'question': "Sei sicuro?",
                 'options': [
-                    {'text': "Sì", 'result': "Hai scelto Grigio"},
+                    {'text': "Sì", 'result': "Grigio"},
                     {'text': "No"}
                 ]
             }},
             {'text': "Nero", 'next': {
                 'question': "Sei sicuro?",
                 'options': [
-                    {'text': "Sì", 'result': "Hai scelto Nero"},
+                    {'text': "Sì", 'result': "Nero"},
                     {'text': "No"}
                 ]
             }},
@@ -193,73 +193,104 @@ def main():
     # Strutture ad albero per le domande finali
     final_question_trees = {
         "Rosso": {
-            'question': "Qual è la tua stagione preferita?",
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
-                {'text': "Primavera", 'next': {
-                    'question': "Sei sicuro?",
+                {'text': "A. Reagisco con passione e determinazione. (Fuoco)"},
+                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Aria)"},
+                {'text': "C. Rimango saldo e resisto alle avversità. (Terra)"},
+                {'text': "D. Mi adatto rapidamente e cambio strategia. (Aria)"},
+                {'text': "E. Cerco di mantenere la chiarezza mentale e la tranquillità. (Cristallo)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                'options': [
+                    {'text': "A. Esplorare nuovi luoghi e avventure. (Fuoco)"},
+                    {'text': "B. Rilassarmi e godermi la pace della natura. (Acqua)"},
+                    {'text': "C. Coltivare interessi e hobby che mi appassionano. (Terra)"},
+                    {'text': "D. Sperimentare nuove attività e avventure. (Fuoco)"},
+                    {'text': "E. Stimolare la mia mente con nuove idee e progetti. (Cristallo)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione dei conflitti?",
                     'options': [
-                        {'text': "Sì", 'next': {
-                            'question': "Cosa ti piace di più della primavera?",
+                        {'text': "A. Affronto direttamente il problema con fermezza. (Fuoco)"},
+                        {'text': "B. Cerco di trovare un terreno comune e mediare. (Acqua)"},
+                        {'text': "C. Mantengo la mia posizione con fermezza. (Terra)"},
+                        {'text': "D. Cerco di trovare una soluzione flessibile e adattabile. (Aria)"},
+                        {'text': "E. Cerco di mantenere la calma e la lucidità per trovare una soluzione equilibrata. (Cristallo)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        'options': [
+                            {'text': "A. Avventura e azione mozzafiato. (Fuoco)"},
+                            {'text': "B. Profondità emotiva e introspezione. (Acqua)"},
+                            {'text': "C. Conoscenza e saggezza pratica. (Terra)"},
+                            {'text': "D. Innovazione e idee rivoluzionarie. (Aria)"},
+                            {'text': "E. Ispirazione e visione creativa. (Cristallo)"}
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti in una parola?",
                             'options': [
-                                {'text': "Fiori", 'result': "Hai scelto Fiori in primavera"},
-                                {'text': "Animali", 'result': "Hai scelto Animali in primavera"},
-                                {'text': "Tempo", 'result': "Hai scelto Tempo in primavera"},
-                                {'text': "Gite", 'result': "Hai scelto Gite in primavera"},
-                                {'text': "Altro", 'result': "Hai scelto Altro in primavera"}
-                            ]
-                        }},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Estate", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'next': {
-                            'question': "Cosa ti piace di più dell'estate?",
-                            'options': [
-                                {'text': "Mare", 'result': "Hai scelto Mare in estate"},
-                                {'text': "Vacanze", 'result': "Hai scelto Vacanze in estate"},
-                                {'text': "Sole", 'result': "Hai scelto Sole in estate"},
-                                {'text': "Gite", 'result': "Hai scelto Gite in estate"},
-                                {'text': "Altro", 'result': "Hai scelto Altro in estate"}
-                            ]
-                        }},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Autunno", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'next': {
-                            'question': "Cosa ti piace di più dell'autunno?",
-                            'options': [
-                                {'text': "Foglie", 'result': "Hai scelto Foglie in autunno"},
-                                {'text': "Clima", 'result': "Hai scelto Clima in autunno"},
-                                {'text': "Cibo", 'result': "Hai scelto Cibo in autunno"},
-                                {'text': "Gite", 'result': "Hai scelto Gite in autunno"},
-                                {'text': "Altro", 'result': "Hai scelto Altro in autunno"}
-                            ]
-                        }},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Inverno", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'next': {
-                            'question': "Cosa ti piace di più dell'inverno?",
-                            'options': [
-                                {'text': "Neve", 'result': "Hai scelto Neve in inverno"},
-                                {'text': "Natale", 'result': "Hai scelto Natale in inverno"},
-                                {'text': "Freddo", 'result': "Hai scelto Freddo in inverno"},
-                                {'text': "Gite", 'result': "Hai scelto Gite in inverno"},
-                                {'text': "Altro", 'result': "Hai scelto Altro in inverno"}
-                            ]
-                        }},
-                        {'text': "No"}
-                    ]
-                }}
-            ]
+                                {'text': "A. Appassionato. (Fuoco)"},
+                                {'text': "B. Calmo. (Acqua)"},
+                                {'text': "C. Stabile. (Terra)"},
+                                {'text': "D. Avventuroso. (Aria)"},
+                                {'text': "E. Visionario. (Cristallo)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                'options': [
+                                    {'text': "A. Un accogliente camino acceso. (Fuoco)"},
+                                    {'text': "B. Una spiaggia tranquilla al tramonto. (Acqua)"},
+                                    {'text': "C. Una casa con un giardino rigoglioso. (Terra)"},
+                                    {'text': "D. Una città vibrante e dinamica. (Aria)"},
+                                    {'text': "E. Uno spazio tranquillo e luminoso con arte e cristalli. (Cristallo)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più nella vita?",
+                                    'options': [
+                                        {'text': "A. La passione per ciò che faccio. (Fuoco)"},
+                                        {'text': "B. Il desiderio di pace e armonia. (Acqua)"},
+                                        {'text': "C. La ricerca di sicurezza e stabilità. (Terra)"},
+                                        {'text': "D. L'esplorazione e la scoperta di nuovi orizzonti. (Aria)"},
+                                        {'text': "E. La ricerca della verità e della bellezza nel mondo. (Cristallo)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        'options': [
+                                            {'text': "A. Partecipando a un evento emozionante o una festa. (Fuoco)"},
+                                            {'text': "B. Rilassandoti con una cena tranquilla e una buona lettura. (Acqua)"},
+                                            {'text': "C. Trascorrendo del tempo con amici o familiari vicini. (Terra)"},
+                                            {'text': "D. Esplorando una nuova attività o luogo. (Aria)"},
+                                            {'text': "E. Creando qualcosa di nuovo o riflettendo su idee creative. (Cristallo)"}
+                                        ],
+                                        'next': {
+                                            'question': "Cosa ti attrae di più in una relazione?",
+                                            'options': [
+                                                {'text': "A. Passione e intensità emotiva. (Fuoco)"},
+                                                {'text': "B. Empatia e comprensione reciproca. (Acqua)"},
+                                                {'text': "C. Stabilità e fiducia reciproca. (Terra)"},
+                                                {'text': "D. Avventura e crescita insieme. (Aria)"},
+                                                {'text': "E. Condivisione di ideali e visioni comuni. (Cristallo)"}
+                                            ],
+                                            'next': {
+                                                'question': "Qual è la tua visione della felicità?",
+                                                'options': [
+                                                    {'text': "A. Realizzare i miei sogni e passioni. (Fuoco)"},
+                                                    {'text': "B. Vivere in armonia con me stesso e gli altri. (Acqua)"},
+                                                    {'text': "C. Avere una vita stabile e soddisfacente. (Terra)"},
+                                                    {'text': "D. Esplorare il mondo e le sue infinite possibilità. (Aria)"},
+                                                    {'text': "E. Realizzare il mio pieno potenziale e contribuire al benessere degli altri. (Cristallo)"}
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         },
         "Giallo": {
             'question': "Quale attività preferisci?",
@@ -270,11 +301,11 @@ def main():
                         {'text': "Sì", 'next': {
                             'question': "Quale sport preferisci?",
                             'options': [
-                                {'text': "Calcio", 'result': "Hai scelto Calcio"},
-                                {'text': "Basket", 'result': "Hai scelto Basket"},
-                                {'text': "Nuoto", 'result': "Hai scelto Nuoto"},
-                                {'text': "Ciclismo", 'result': "Hai scelto Ciclismo"},
-                                {'text': "Altro", 'result': "Hai scelto Altro"}
+                                {'text': "Calcio", 'result': "Calcio"},
+                                {'text': "Basket", 'result': "Basket"},
+                                {'text': "Nuoto", 'result': "Nuoto"},
+                                {'text': "Ciclismo", 'result': "Ciclismo"},
+                                {'text': "Altro", 'result': "Altro"}
                             ]
                         }},
                         {'text': "No"}
@@ -286,11 +317,11 @@ def main():
                         {'text': "Sì", 'next': {
                             'question': "Quale attività creativa preferisci?",
                             'options': [
-                                {'text': "Pittura", 'result': "Hai scelto Pittura"},
-                                {'text': "Scrittura", 'result': "Hai scelto Scrittura"},
-                                {'text': "Musica", 'result': "Hai scelto Musica"},
-                                {'text': "Fotografia", 'result': "Hai scelto Fotografia"},
-                                {'text': "Altro", 'result': "Hai scelto Altro"}
+                                {'text': "Pittura", 'result': "Pittura"},
+                                {'text': "Scrittura", 'result': "Scrittura"},
+                                {'text': "Musica", 'result': "Musica"},
+                                {'text': "Fotografia", 'result': "Fotografia"},
+                                {'text': "Altro", 'result': "Altro"}
                             ]
                         }},
                         {'text': "No"}
@@ -302,11 +333,11 @@ def main():
                         {'text': "Sì", 'next': {
                             'question': "Quale attività culturale preferisci?",
                             'options': [
-                                {'text': "Visite a musei", 'result': "Hai scelto Visite a musei"},
-                                {'text': "Lettura di libri", 'result': "Hai scelto Lettura di libri"},
-                                {'text': "Frequentare concerti", 'result': "Hai scelto Frequentare concerti"},
-                                {'text': "Guardare film", 'result': "Hai scelto Guardare film"},
-                                {'text': "Altro", 'result': "Hai scelto Altro"}
+                                {'text': "Visite a musei", 'result': "Visite a musei"},
+                                {'text': "Lettura di libri", 'result': "Lettura di libri"},
+                                {'text': "Frequentare concerti", 'result': "Frequentare concerti"},
+                                {'text': "Guardare film", 'result': "Guardare film"},
+                                {'text': "Altro", 'result': "Altro"}
                             ]
                         }},
                         {'text': "No"}
@@ -318,11 +349,11 @@ def main():
                         {'text': "Sì", 'next': {
                             'question': "Quale attività rilassante preferisci?",
                             'options': [
-                                {'text': "Yoga", 'result': "Hai scelto Yoga"},
-                                {'text': "Meditazione", 'result': "Hai scelto Meditazione"},
-                                {'text': "Escursioni in natura", 'result': "Hai scelto Escursioni in natura"},
-                                {'text': "Bagno caldo", 'result': "Hai scelto Bagno caldo"},
-                                {'text': "Altro", 'result': "Hai scelto Altro"}
+                                {'text': "Yoga", 'result': "Yoga"},
+                                {'text': "Meditazione", 'result': "Meditazione"},
+                                {'text': "Escursioni in natura", 'result': "Escursioni in natura"},
+                                {'text': "Bagno caldo", 'result': "Bagno caldo"},
+                                {'text': "Altro", 'result': "Altro"}
                             ]
                         }},
                         {'text': "No"}
@@ -336,98 +367,298 @@ def main():
                 {'text': "Lettura", 'next': {
                     'question': "Sei sicuro?",
                     'options': [
-                        {'text': "Sì", 'result': "Hai scelto Lettura"},
+                        {'text': "Sì", 'result': "Lettura"},
                         {'text': "No"}
                     ]
                 }},
                 {'text': "Sport", 'next': {
                     'question': "Sei sicuro?",
                     'options': [
-                        {'text': "Sì", 'result': "Hai scelto Sport"},
+                        {'text': "Sì", 'result': "Sport"},
                         {'text': "No"}
                     ]
                 }},
                 {'text': "Musica", 'next': {
                     'question': "Sei sicuro?",
                     'options': [
-                        {'text': "Sì", 'result': "Hai scelto Musica"},
+                        {'text': "Sì", 'result': "Musica"},
                         {'text': "No"}
                     ]
                 }},
                 {'text': "Cucina", 'next': {
                     'question': "Sei sicuro?",
                     'options': [
-                        {'text': "Sì", 'result': "Hai scelto Cucina"},
+                        {'text': "Sì", 'result': "Cucina"},
                         {'text': "No"}
                     ]
                 }},
                 {'text': "Arte", 'next': {
                     'question': "Sei sicuro?",
                     'options': [
-                        {'text': "Sì", 'result': "Hai scelto Arte"},
+                        {'text': "Sì", 'result': "Arte"},
                         {'text': "No"}
                     ]
                 }}
             ]
         },
+        "Arancio-Rosso": {
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
+            'options': [
+                {'text': "A. Reagisco con passione e determinazione. (Fuoco)"},
+                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Aria)"},
+                {'text': "C. Rimango saldo e resisto alle avversità. (Terra)"},
+                {'text': "D. Mi adatto rapidamente e cambio strategia. (Aria)"},
+                {'text': "E. Cerco di mantenere la chiarezza mentale e la tranquillità. (Cristallo)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                'options': [
+                    {'text': "A. Esplorare nuovi luoghi e avventure. (Fuoco)"},
+                    {'text': "B. Rilassarmi e godermi la pace della natura. (Acqua)"},
+                    {'text': "C. Coltivare interessi e hobby che mi appassionano. (Terra)"},
+                    {'text': "D. Sperimentare nuove attività e avventure. (Fuoco)"},
+                    {'text': "E. Stimolare la mia mente con nuove idee e progetti. (Cristallo)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione dei conflitti?",
+                    'options': [
+                        {'text': "A. Affronto direttamente il problema con fermezza. (Fuoco)"},
+                        {'text': "B. Cerco di trovare un terreno comune e mediare. (Acqua)"},
+                        {'text': "C. Mantengo la mia posizione con fermezza. (Terra)"},
+                        {'text': "D. Cerco di trovare una soluzione flessibile e adattabile. (Aria)"},
+                        {'text': "E. Cerco di mantenere la calma e la lucidità per trovare una soluzione equilibrata. (Cristallo)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        'options': [
+                            {'text': "A. Avventura e azione mozzafiato. (Fuoco)"},
+                            {'text': "B. Profondità emotiva e introspezione. (Acqua)"},
+                            {'text': "C. Conoscenza e saggezza pratica. (Terra)"},
+                            {'text': "D. Innovazione e idee rivoluzionarie. (Aria)"},
+                            {'text': "E. Ispirazione e visione creativa. (Cristallo)"}
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti in una parola?",
+                            'options': [
+                                {'text': "A. Appassionato. (Fuoco)"},
+                                {'text': "B. Calmo. (Acqua)"},
+                                {'text': "C. Stabile. (Terra)"},
+                                {'text': "D. Avventuroso. (Aria)"},
+                                {'text': "E. Visionario. (Cristallo)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                'options': [
+                                    {'text': "A. Un accogliente camino acceso. (Fuoco)"},
+                                    {'text': "B. Una spiaggia tranquilla al tramonto. (Acqua)"},
+                                    {'text': "C. Una casa con un giardino rigoglioso. (Terra)"},
+                                    {'text': "D. Una città vibrante e dinamica. (Aria)"},
+                                    {'text': "E. Uno spazio tranquillo e luminoso con arte e cristalli. (Cristallo)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più nella vita?",
+                                    'options': [
+                                        {'text': "A. La passione per ciò che faccio. (Fuoco)"},
+                                        {'text': "B. Il desiderio di pace e armonia. (Acqua)"},
+                                        {'text': "C. La ricerca di sicurezza e stabilità. (Terra)"},
+                                        {'text': "D. L'esplorazione e la scoperta di nuovi orizzonti. (Aria)"},
+                                        {'text': "E. La ricerca della verità e della bellezza nel mondo. (Cristallo)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        'options': [
+                                            {'text': "A. Partecipando a un evento emozionante o una festa. (Fuoco)"},
+                                            {'text': "B. Rilassandoti con una cena tranquilla e una buona lettura. (Acqua)"},
+                                            {'text': "C. Trascorrendo del tempo con amici o familiari vicini. (Terra)"},
+                                            {'text': "D. Esplorando una nuova attività o luogo. (Aria)"},
+                                            {'text': "E. Creando qualcosa di nuovo o riflettendo su idee creative. (Cristallo)"}
+                                        ],
+                                        'next': {
+                                            'question': "Cosa ti attrae di più in una relazione?",
+                                            'options': [
+                                                {'text': "A. Passione e intensità emotiva. (Fuoco)"},
+                                                {'text': "B. Empatia e comprensione reciproca. (Acqua)"},
+                                                {'text': "C. Stabilità e fiducia reciproca. (Terra)"},
+                                                {'text': "D. Avventura e crescita insieme. (Aria)"},
+                                                {'text': "E. Condivisione di ideali e visioni comuni. (Cristallo)"}
+                                            ],
+                                            'next': {
+                                                'question': "Qual è la tua visione della felicità?",
+                                                'options': [
+                                                    {'text': "A. Realizzare i miei sogni e passioni. (Fuoco)"},
+                                                    {'text': "B. Vivere in armonia con me stesso e gli altri. (Acqua)"},
+                                                    {'text': "C. Avere una vita stabile e soddisfacente. (Terra)"},
+                                                    {'text': "D. Esplorare il mondo e le sue infinite possibilità. (Aria)"},
+                                                    {'text': "E. Realizzare il mio pieno potenziale e contribuire al benessere degli altri. (Cristallo)"}
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "Arancio": {
             'question': "Qual è il tuo cibo preferito?",
             'options': [
-                {'text': "Pizza", 'result': "Hai scelto Pizza"},
-                {'text': "Pasta", 'result': "Hai scelto Pasta"},
-                {'text': "Sushi", 'result': "Hai scelto Sushi"},
-                {'text': "Hamburger", 'result': "Hai scelto Hamburger"},
-                {'text': "Insalata", 'result': "Hai scelto Insalata"}
+                {'text': "Pizza", 'result': "Pizza"},
+                {'text': "Pasta", 'result': "Pasta"},
+                {'text': "Sushi", 'result': "Sushi"},
+                {'text': "Hamburger", 'result': "Hamburger"},
+                {'text': "Insalata", 'result': "Insalata"}
             ]
         },
         "Verde": {
             'question': "Qual è il tuo animale preferito?",
             'options': [
-                {'text': "Cane", 'result': "Hai scelto Cane"},
-                {'text': "Gatto", 'result': "Hai scelto Gatto"},
-                {'text': "Uccello", 'result': "Hai scelto Uccello"},
-                {'text': "Pesce", 'result': "Hai scelto Pesce"},
-                {'text': "Coniglio", 'result': "Hai scelto Coniglio"}
+                {'text': "Cane", 'result': "Cane"},
+                {'text': "Gatto", 'result': "Gatto"},
+                {'text': "Uccello", 'result': "Uccello"},
+                {'text': "Pesce", 'result': "Pesce"},
+                {'text': "Coniglio", 'result': "Coniglio"}
             ]
+        },
+        "Viola-Rosso": {
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
+            'options': [
+                {'text': "A. Reagisco con passione e determinazione. (Fuoco)"},
+                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Aria)"},
+                {'text': "C. Rimango saldo e resisto alle avversità. (Terra)"},
+                {'text': "D. Mi adatto rapidamente e cambio strategia. (Aria)"},
+                {'text': "E. Cerco di mantenere la chiarezza mentale e la tranquillità. (Cristallo)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                'options': [
+                    {'text': "A. Esplorare nuovi luoghi e avventure. (Fuoco)"},
+                    {'text': "B. Rilassarmi e godermi la pace della natura. (Acqua)"},
+                    {'text': "C. Coltivare interessi e hobby che mi appassionano. (Terra)"},
+                    {'text': "D. Sperimentare nuove attività e avventure. (Fuoco)"},
+                    {'text': "E. Stimolare la mia mente con nuove idee e progetti. (Cristallo)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione dei conflitti?",
+                    'options': [
+                        {'text': "A. Affronto direttamente il problema con fermezza. (Fuoco)"},
+                        {'text': "B. Cerco di trovare un terreno comune e mediare. (Acqua)"},
+                        {'text': "C. Mantengo la mia posizione con fermezza. (Terra)"},
+                        {'text': "D. Cerco di trovare una soluzione flessibile e adattabile. (Aria)"},
+                        {'text': "E. Cerco di mantenere la calma e la lucidità per trovare una soluzione equilibrata. (Cristallo)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        'options': [
+                            {'text': "A. Avventura e azione mozzafiato. (Fuoco)"},
+                            {'text': "B. Profondità emotiva e introspezione. (Acqua)"},
+                            {'text': "C. Conoscenza e saggezza pratica. (Terra)"},
+                            {'text': "D. Innovazione e idee rivoluzionarie. (Aria)"},
+                            {'text': "E. Ispirazione e visione creativa. (Cristallo)"}
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti in una parola?",
+                            'options': [
+                                {'text': "A. Appassionato. (Fuoco)"},
+                                {'text': "B. Calmo. (Acqua)"},
+                                {'text': "C. Stabile. (Terra)"},
+                                {'text': "D. Avventuroso. (Aria)"},
+                                {'text': "E. Visionario. (Cristallo)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                'options': [
+                                    {'text': "A. Un accogliente camino acceso. (Fuoco)"},
+                                    {'text': "B. Una spiaggia tranquilla al tramonto. (Acqua)"},
+                                    {'text': "C. Una casa con un giardino rigoglioso. (Terra)"},
+                                    {'text': "D. Una città vibrante e dinamica. (Aria)"},
+                                    {'text': "E. Uno spazio tranquillo e luminoso con arte e cristalli. (Cristallo)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più nella vita?",
+                                    'options': [
+                                        {'text': "A. La passione per ciò che faccio. (Fuoco)"},
+                                        {'text': "B. Il desiderio di pace e armonia. (Acqua)"},
+                                        {'text': "C. La ricerca di sicurezza e stabilità. (Terra)"},
+                                        {'text': "D. L'esplorazione e la scoperta di nuovi orizzonti. (Aria)"},
+                                        {'text': "E. La ricerca della verità e della bellezza nel mondo. (Cristallo)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        'options': [
+                                            {'text': "A. Partecipando a un evento emozionante o una festa. (Fuoco)"},
+                                            {'text': "B. Rilassandoti con una cena tranquilla e una buona lettura. (Acqua)"},
+                                            {'text': "C. Trascorrendo del tempo con amici o familiari vicini. (Terra)"},
+                                            {'text': "D. Esplorando una nuova attività o luogo. (Aria)"},
+                                            {'text': "E. Creando qualcosa di nuovo o riflettendo su idee creative. (Cristallo)"}
+                                        ],
+                                        'next': {
+                                            'question': "Cosa ti attrae di più in una relazione?",
+                                            'options': [
+                                                {'text': "A. Passione e intensità emotiva. (Fuoco)"},
+                                                {'text': "B. Empatia e comprensione reciproca. (Acqua)"},
+                                                {'text': "C. Stabilità e fiducia reciproca. (Terra)"},
+                                                {'text': "D. Avventura e crescita insieme. (Aria)"},
+                                                {'text': "E. Condivisione di ideali e visioni comuni. (Cristallo)"}
+                                            ],
+                                            'next': {
+                                                'question': "Qual è la tua visione della felicità?",
+                                                'options': [
+                                                    {'text': "A. Realizzare i miei sogni e passioni. (Fuoco)"},
+                                                    {'text': "B. Vivere in armonia con me stesso e gli altri. (Acqua)"},
+                                                    {'text': "C. Avere una vita stabile e soddisfacente. (Terra)"},
+                                                    {'text': "D. Esplorare il mondo e le sue infinite possibilità. (Aria)"},
+                                                    {'text': "E. Realizzare il mio pieno potenziale e contribuire al benessere degli altri. (Cristallo)"}
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         },
         "Viola": {
             'question': "Quale è la tua bevanda preferita?",
             'options': [
-                {'text': "Caffè", 'result': "Hai scelto Caffè"},
-                {'text': "Tè", 'result': "Hai scelto Tè"},
-                {'text': "Succhi di frutta", 'result': "Hai scelto Succhi di frutta"},
-                {'text': "Birra", 'result': "Hai scelto Birra"},
-                {'text': "Vino", 'result': "Hai scelto Vino"}
+                {'text': "Caffè", 'result': "Caffè"},
+                {'text': "Tè", 'result': "Tè"},
+                {'text': "Succhi di frutta", 'result': "Succhi di frutta"},
+                {'text': "Birra", 'result': "Birra"},
+                {'text': "Vino", 'result': "Vino"}
             ]
         },
         "Bianco": {
             'question': "Qual è il tuo film preferito?",
             'options': [
-                {'text': "Drammatico", 'result': "Hai scelto un film Drammatico"},
-                {'text': "Commedia", 'result': "Hai scelto un film Commedia"},
-                {'text': "Azione", 'result': "Hai scelto un film d'Azione"},
-                {'text': "Fantascienza", 'result': "Hai scelto un film di Fantascienza"},
-                {'text': "Horror", 'result': "Hai scelto un film Horror"}
+                {'text': "Drammatico", 'result': "un film Drammatico"},
+                {'text': "Commedia", 'result': "un film Commedia"},
+                {'text': "Azione", 'result': "un film d'Azione"},
+                {'text': "Fantascienza", 'result': "un film di Fantascienza"},
+                {'text': "Horror", 'result': "un film Horror"}
             ]
         },
         "Grigio": {
             'question': "Qual è il tuo luogo preferito?",
             'options': [
-                {'text': "Mare", 'result': "Hai scelto Mare"},
-                {'text': "Montagna", 'result': "Hai scelto Montagna"},
-                {'text': "Città", 'result': "Hai scelto Città"},
-                {'text': "Campagna", 'result': "Hai scelto Campagna"},
-                {'text': "Deserto", 'result': "Hai scelto Deserto"}
+                {'text': "Mare", 'result': "Mare"},
+                {'text': "Montagna", 'result': "Montagna"},
+                {'text': "Città", 'result': "Città"},
+                {'text': "Campagna", 'result': "Campagna"},
+                {'text': "Deserto", 'result': "Deserto"}
             ]
         },
         "Nero": {
             'question': "Qual è il tuo sport preferito?",
             'options': [
-                {'text': "Calcio", 'result': "Hai scelto Calcio"},
-                {'text': "Basket", 'result': "Hai scelto Basket"},
-                {'text': "Tennis", 'result': "Hai scelto Tennis"},
-                {'text': "Nuoto", 'result': "Hai scelto Nuoto"},
-                {'text': "Atletica", 'result': "Hai scelto Atletica"}
+                {'text': "Calcio", 'result': "Calcio"},
+                {'text': "Basket", 'result': "Basket"},
+                {'text': "Tennis", 'result': "Tennis"},
+                {'text': "Nuoto", 'result': "Nuoto"},
+                {'text': "Atletica", 'result': "Atletica"}
             ]
         }
     }
@@ -435,6 +666,7 @@ def main():
     # Inizio del questionario
     answers = []
     color_choice = ask_questions(color_class, answers)
+    print(color_choice)
     final_result = ask_final_questions(final_question_trees[color_choice], answers)
     print(final_result)
 
