@@ -54,11 +54,11 @@ def ask_final_questions(final_node, answers):
 
     answer_index = int(answer) - 1
     next_node = final_node['options'][answer_index]
-
-    if 'next' in next_node:
-        return ask_final_questions(next_node['next'], answers)
-    elif 'result' in next_node:
-        return next_node['result']
+    answers.append(answer)
+    if 'next' in final_node:
+        return ask_final_questions(final_node['next'], answers)
+    elif 'result' in final_node:
+        return final_node['result']
     else:
         if next_node['text'].lower() == "no":
             return ask_final_questions(final_node, answers)
@@ -281,7 +281,8 @@ def main():
                                                     {'text': "C. Avere una vita stabile e soddisfacente. (Terra)"},
                                                     {'text': "D. Esplorare il mondo e le sue infinite possibilità. (Aria)"},
                                                     {'text': "E. Realizzare il mio pieno potenziale e contribuire al benessere degli altri. (Cristallo)"}
-                                                ]
+                                                ],
+                                                'result': ""
                                             }
                                         }
                                     }
@@ -667,8 +668,11 @@ def main():
     answers = []
     color_choice = ask_questions(color_class, answers)
     print(color_choice)
-    final_result = ask_final_questions(final_question_trees[color_choice], answers)
-    print(final_result)
+    ask_final_questions(final_question_trees[color_choice], answers)
+    print(answers)
+    print("Fuoco ",answers.count("1"),"\nAcqua ",answers.count("2"),
+          "\nTerra ",answers.count("3"),"\nAria ",answers.count("4"),
+          "\nCristallo ",answers.count("5"))
 
 if __name__ == "__main__":
     main()
