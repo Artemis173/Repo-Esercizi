@@ -196,7 +196,7 @@ def main():
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
                 {'text': "A. Reagisco con passione e determinazione. (Fuoco)"},
-                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Aria)"},
+                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Acqua)"},
                 {'text': "C. Rimango saldo e resisto alle avversità. (Terra)"},
                 {'text': "D. Mi adatto rapidamente e cambio strategia. (Aria)"},
                 {'text': "E. Cerco di mantenere la chiarezza mentale e la tranquillità. (Cristallo)"}
@@ -207,7 +207,7 @@ def main():
                     {'text': "A. Esplorare nuovi luoghi e avventure. (Fuoco)"},
                     {'text': "B. Rilassarmi e godermi la pace della natura. (Acqua)"},
                     {'text': "C. Coltivare interessi e hobby che mi appassionano. (Terra)"},
-                    {'text': "D. Sperimentare nuove attività e avventure. (Fuoco)"},
+                    {'text': "D. Sperimentare nuove attività e avventure. (Aria)"},
                     {'text': "E. Stimolare la mia mente con nuove idee e progetti. (Cristallo)"}
                 ],
                 'next': {
@@ -405,7 +405,7 @@ def main():
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
                 {'text': "A. Reagisco con passione e determinazione. (Fuoco)"},
-                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Aria)"},
+                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Acqua)"},
                 {'text': "C. Rimango saldo e resisto alle avversità. (Terra)"},
                 {'text': "D. Mi adatto rapidamente e cambio strategia. (Aria)"},
                 {'text': "E. Cerco di mantenere la chiarezza mentale e la tranquillità. (Cristallo)"}
@@ -416,7 +416,7 @@ def main():
                     {'text': "A. Esplorare nuovi luoghi e avventure. (Fuoco)"},
                     {'text': "B. Rilassarmi e godermi la pace della natura. (Acqua)"},
                     {'text': "C. Coltivare interessi e hobby che mi appassionano. (Terra)"},
-                    {'text': "D. Sperimentare nuove attività e avventure. (Fuoco)"},
+                    {'text': "D. Sperimentare nuove attività e avventure. (Aria)"},
                     {'text': "E. Stimolare la mia mente con nuove idee e progetti. (Cristallo)"}
                 ],
                 'next': {
@@ -525,7 +525,7 @@ def main():
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
                 {'text': "A. Reagisco con passione e determinazione. (Fuoco)"},
-                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Aria)"},
+                {'text': "B. Mantengo la calma e cerco soluzioni razionali. (Acqua)"},
                 {'text': "C. Rimango saldo e resisto alle avversità. (Terra)"},
                 {'text': "D. Mi adatto rapidamente e cambio strategia. (Aria)"},
                 {'text': "E. Cerco di mantenere la chiarezza mentale e la tranquillità. (Cristallo)"}
@@ -536,7 +536,7 @@ def main():
                     {'text': "A. Esplorare nuovi luoghi e avventure. (Fuoco)"},
                     {'text': "B. Rilassarmi e godermi la pace della natura. (Acqua)"},
                     {'text': "C. Coltivare interessi e hobby che mi appassionano. (Terra)"},
-                    {'text': "D. Sperimentare nuove attività e avventure. (Fuoco)"},
+                    {'text': "D. Sperimentare nuove attività e avventure. (Aria)"},
                     {'text': "E. Stimolare la mia mente con nuove idee e progetti. (Cristallo)"}
                 ],
                 'next': {
