@@ -363,44 +363,95 @@ def main():
             ]
         },
         "Blu": {
-            'question': "Qual è il tuo hobby preferito?",
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
-                {'text': "Lettura", 'next': {
-                    'question': "Sei sicuro?",
+                {'text': "A. Analizzo la situazione e cerco una soluzione logica. (Mente)"},
+                {'text': "B. Cerco di mantenere l'energia positiva e affronto il problema con vitalità. (Vita)"},
+                {'text': "C. Mi isolo per riflettere e trovare calma interiore. (Vuoto)"},
+                {'text': "D. Cerco supporto e conforto nelle persone a me care. (Luce)"},
+                {'text': "E. Affronto la situazione con curiosità, cercando di comprendere ogni aspetto nascosto. (Oscurità)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                'options': [
+                    {'text': "A. Imparare nuove cose e leggere libri. (Mente)"},
+                    {'text': "B. Fare attività all'aperto come passeggiate o giardinaggio. (Vita)"},
+                    {'text': "C. Meditare o praticare yoga in tranquillità. (Vuoto)"},
+                    {'text': "D. Socializzare con amici e famiglia, portando gioia nelle loro vite. (Luce)"},
+                    {'text': "E. Guardare film o leggere libri che esplorano temi oscuri e misteriosi. (Oscurità)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione di conflitti?",
                     'options': [
-                        {'text': "Sì", 'result': "Lettura"},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Sport", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'result': "Sport"},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Musica", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'result': "Musica"},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Cucina", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'result': "Cucina"},
-                        {'text': "No"}
-                    ]
-                }},
-                {'text': "Arte", 'next': {
-                    'question': "Sei sicuro?",
-                    'options': [
-                        {'text': "Sì", 'result': "Arte"},
-                        {'text': "No"}
-                    ]
-                }}
-            ]
+                        {'text': "A. Uso la logica e il ragionamento per trovare una soluzione. (Mente)"},
+                        {'text': "B. Cerco un compromesso che permetta a tutte le parti di crescere. (Vita)"},
+                        {'text': "C. Rifletto in silenzio e cerco di capire la situazione prima di agire. (Vuoto)"},
+                        {'text': "D. Cerco di portare luce e positività nella situazione, promuovendo la pace. (Luce)"},
+                        {'text': "E. Analizzo le emozioni profonde e i motivi nascosti dietro il conflitto. (Oscurità)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        'options': [
+                            {'text': "A. Un intreccio complesso e intellettuale. (Mente)"},
+                            {'text': "B. Personaggi che crescono e si evolvono. (Vita)"},
+                            {'text': "C. Atmosfere calme e contemplative. (Vuoto)"},
+                            {'text': "D. Temi di speranza e redenzione. (Luce)"},
+                            {'text': "E. Elementi soprannaturali e oscuri. (Oscurità)"}                                                      
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti in una parola?",
+                            'options': [
+                                {'text': "A. Intelligente. (Mente)"},
+                                {'text': "B. Energetico. (Vita)"},
+                                {'text': "C. Riflessivo. (Vuoto)"},
+                                {'text': "D. Altruista. (Luce)"},
+                                {'text': "E. Misterioso. (Oscurità)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                'options': [
+                                    {'text': "A. Una biblioteca o uno studio tranquillo. (Mente)"},
+                                    {'text': "B. Un giardino o un parco naturale. (Vita)"},
+                                    {'text': "C. Una stanza silenziosa e isolata. (Vuoto)"},
+                                    {'text': "D. Un luogo soleggiato e pieno di vita. (Luce)"},
+                                    {'text': "E. Un castello antico o un luogo misterioso. (Oscurità)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più?",
+                                    'options': [
+                                        {'text': "A. La scoperta di nuove conoscenze e idee. (Mente)"},
+                                        {'text': "B. La crescita personale e il benessere fisico. (Vita)"},
+                                        {'text': "C. La ricerca della pace interiore. (Vuoto)"},
+                                        {'text': "D. L'aiuto e il supporto agli altri. (Luce)"},
+                                        {'text': "E. L'esplorazione del mistero e dell'ignoto. (Oscurità)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        'options': [
+                                            {'text': "A. Leggendo un libro interessante o studiando qualcosa di nuovo. (Mente)"},
+                                            {'text': "B. Facendo una passeggiata o esercizio fisico. (Vita)"},
+                                            {'text': "C. Meditando o ascoltando musica rilassante. (Vuoto)"},
+                                            {'text': "D. Passando del tempo con amici e familiari. (Luce)"},
+                                            {'text': "E. Guardando un film horror o leggendo un libro misterioso. (Oscurità)"}
+                                        ],
+                                        'next': {
+                                            'question': "Qual è la tua visione della felicità?",
+                                            'options': [
+                                                {'text': "A. Comprendere e conoscere sempre di più. (Mente)"},
+                                                {'text': "B. Vivere una vita piena e attiva. (Vita)"},
+                                                {'text': "C. Trovare pace e serenità dentro di sé. (Vuoto)"},
+                                                {'text': "D. Condividere gioia e luce con gli altri. (Luce)"},
+                                                {'text': "E. Scoprire i segreti nascosti della vita. (Oscurità)"}
+                                            ],
+                                            'result': ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         },
         "Arancio-Rosso": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
@@ -523,14 +574,95 @@ def main():
             ]
         },
         "Verde-Blu": {
-            'question': "Qual è il tuo animale preferito?",
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
-                {'text': "Cane", 'result': "Cane"},
-                {'text': "Gatto", 'result': "Gatto"},
-                {'text': "Uccello", 'result': "Uccello"},
-                {'text': "Pesce", 'result': "Pesce"},
-                {'text': "Coniglio", 'result': "Coniglio"}
-            ]
+                {'text': "A. Analizzo la situazione e cerco una soluzione logica. (Mente)"},
+                {'text': "B. Cerco di mantenere l'energia positiva e affronto il problema con vitalità. (Vita)"},
+                {'text': "C. Mi isolo per riflettere e trovare calma interiore. (Vuoto)"},
+                {'text': "D. Cerco supporto e conforto nelle persone a me care. (Luce)"},
+                {'text': "E. Affronto la situazione con curiosità, cercando di comprendere ogni aspetto nascosto. (Oscurità)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                'options': [
+                    {'text': "A. Imparare nuove cose e leggere libri. (Mente)"},
+                    {'text': "B. Fare attività all'aperto come passeggiate o giardinaggio. (Vita)"},
+                    {'text': "C. Meditare o praticare yoga in tranquillità. (Vuoto)"},
+                    {'text': "D. Socializzare con amici e famiglia, portando gioia nelle loro vite. (Luce)"},
+                    {'text': "E. Guardare film o leggere libri che esplorano temi oscuri e misteriosi. (Oscurità)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione di conflitti?",
+                    'options': [
+                        {'text': "A. Uso la logica e il ragionamento per trovare una soluzione. (Mente)"},
+                        {'text': "B. Cerco un compromesso che permetta a tutte le parti di crescere. (Vita)"},
+                        {'text': "C. Rifletto in silenzio e cerco di capire la situazione prima di agire. (Vuoto)"},
+                        {'text': "D. Cerco di portare luce e positività nella situazione, promuovendo la pace. (Luce)"},
+                        {'text': "E. Analizzo le emozioni profonde e i motivi nascosti dietro il conflitto. (Oscurità)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        'options': [
+                            {'text': "A. Un intreccio complesso e intellettuale. (Mente)"},
+                            {'text': "B. Personaggi che crescono e si evolvono. (Vita)"},
+                            {'text': "C. Atmosfere calme e contemplative. (Vuoto)"},
+                            {'text': "D. Temi di speranza e redenzione. (Luce)"},
+                            {'text': "E. Elementi soprannaturali e oscuri. (Oscurità)"}                                                      
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti in una parola?",
+                            'options': [
+                                {'text': "A. Intelligente. (Mente)"},
+                                {'text': "B. Energetico. (Vita)"},
+                                {'text': "C. Riflessivo. (Vuoto)"},
+                                {'text': "D. Altruista. (Luce)"},
+                                {'text': "E. Misterioso. (Oscurità)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                'options': [
+                                    {'text': "A. Una biblioteca o uno studio tranquillo. (Mente)"},
+                                    {'text': "B. Un giardino o un parco naturale. (Vita)"},
+                                    {'text': "C. Una stanza silenziosa e isolata. (Vuoto)"},
+                                    {'text': "D. Un luogo soleggiato e pieno di vita. (Luce)"},
+                                    {'text': "E. Un castello antico o un luogo misterioso. (Oscurità)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più?",
+                                    'options': [
+                                        {'text': "A. La scoperta di nuove conoscenze e idee. (Mente)"},
+                                        {'text': "B. La crescita personale e il benessere fisico. (Vita)"},
+                                        {'text': "C. La ricerca della pace interiore. (Vuoto)"},
+                                        {'text': "D. L'aiuto e il supporto agli altri. (Luce)"},
+                                        {'text': "E. L'esplorazione del mistero e dell'ignoto. (Oscurità)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        'options': [
+                                            {'text': "A. Leggendo un libro interessante o studiando qualcosa di nuovo. (Mente)"},
+                                            {'text': "B. Facendo una passeggiata o esercizio fisico. (Vita)"},
+                                            {'text': "C. Meditando o ascoltando musica rilassante. (Vuoto)"},
+                                            {'text': "D. Passando del tempo con amici e familiari. (Luce)"},
+                                            {'text': "E. Guardando un film horror o leggendo un libro misterioso. (Oscurità)"}
+                                        ],
+                                        'next': {
+                                            'question': "Qual è la tua visione della felicità?",
+                                            'options': [
+                                                {'text': "A. Comprendere e conoscere sempre di più. (Mente)"},
+                                                {'text': "B. Vivere una vita piena e attiva. (Vita)"},
+                                                {'text': "C. Trovare pace e serenità dentro di sé. (Vuoto)"},
+                                                {'text': "D. Condividere gioia e luce con gli altri. (Luce)"},
+                                                {'text': "E. Scoprire i segreti nascosti della vita. (Oscurità)"}
+                                            ],
+                                            'result': ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         },
         "Viola-Rosso": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
@@ -633,14 +765,95 @@ def main():
             }
         },
         "Viola-Blu": {
-            'question': "Quale è la tua bevanda preferita?",
+            'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
-                {'text': "Caffè", 'result': "Caffè"},
-                {'text': "Tè", 'result': "Tè"},
-                {'text': "Succhi di frutta", 'result': "Succhi di frutta"},
-                {'text': "Birra", 'result': "Birra"},
-                {'text': "Vino", 'result': "Vino"}
-            ]
+                {'text': "A. Analizzo la situazione e cerco una soluzione logica. (Mente)"},
+                {'text': "B. Cerco di mantenere l'energia positiva e affronto il problema con vitalità. (Vita)"},
+                {'text': "C. Mi isolo per riflettere e trovare calma interiore. (Vuoto)"},
+                {'text': "D. Cerco supporto e conforto nelle persone a me care. (Luce)"},
+                {'text': "E. Affronto la situazione con curiosità, cercando di comprendere ogni aspetto nascosto. (Oscurità)"}
+            ],
+            'next': {
+                'question': "Cosa preferisci fare nel tempo libero?",
+                'options': [
+                    {'text': "A. Imparare nuove cose e leggere libri. (Mente)"},
+                    {'text': "B. Fare attività all'aperto come passeggiate o giardinaggio. (Vita)"},
+                    {'text': "C. Meditare o praticare yoga in tranquillità. (Vuoto)"},
+                    {'text': "D. Socializzare con amici e famiglia, portando gioia nelle loro vite. (Luce)"},
+                    {'text': "E. Guardare film o leggere libri che esplorano temi oscuri e misteriosi. (Oscurità)"}
+                ],
+                'next': {
+                    'question': "Qual è il tuo approccio alla risoluzione di conflitti?",
+                    'options': [
+                        {'text': "A. Uso la logica e il ragionamento per trovare una soluzione. (Mente)"},
+                        {'text': "B. Cerco un compromesso che permetta a tutte le parti di crescere. (Vita)"},
+                        {'text': "C. Rifletto in silenzio e cerco di capire la situazione prima di agire. (Vuoto)"},
+                        {'text': "D. Cerco di portare luce e positività nella situazione, promuovendo la pace. (Luce)"},
+                        {'text': "E. Analizzo le emozioni profonde e i motivi nascosti dietro il conflitto. (Oscurità)"}
+                    ],
+                    'next': {
+                        'question': "Cosa ti attrae di più in un libro?",
+                        'options': [
+                            {'text': "A. Un intreccio complesso e intellettuale. (Mente)"},
+                            {'text': "B. Personaggi che crescono e si evolvono. (Vita)"},
+                            {'text': "C. Atmosfere calme e contemplative. (Vuoto)"},
+                            {'text': "D. Temi di speranza e redenzione. (Luce)"},
+                            {'text': "E. Elementi soprannaturali e oscuri. (Oscurità)"}                                                      
+                        ],
+                        'next': {
+                            'question': "Come ti descriveresti in una parola?",
+                            'options': [
+                                {'text': "A. Intelligente. (Mente)"},
+                                {'text': "B. Energetico. (Vita)"},
+                                {'text': "C. Riflessivo. (Vuoto)"},
+                                {'text': "D. Altruista. (Luce)"},
+                                {'text': "E. Misterioso. (Oscurità)"}
+                            ],
+                            'next': {
+                                'question': "Quale ambiente ti mette più a tuo agio?",
+                                'options': [
+                                    {'text': "A. Una biblioteca o uno studio tranquillo. (Mente)"},
+                                    {'text': "B. Un giardino o un parco naturale. (Vita)"},
+                                    {'text': "C. Una stanza silenziosa e isolata. (Vuoto)"},
+                                    {'text': "D. Un luogo soleggiato e pieno di vita. (Luce)"},
+                                    {'text': "E. Un castello antico o un luogo misterioso. (Oscurità)"}
+                                ],
+                                'next': {
+                                    'question': "Cosa ti motiva di più?",
+                                    'options': [
+                                        {'text': "A. La scoperta di nuove conoscenze e idee. (Mente)"},
+                                        {'text': "B. La crescita personale e il benessere fisico. (Vita)"},
+                                        {'text': "C. La ricerca della pace interiore. (Vuoto)"},
+                                        {'text': "D. L'aiuto e il supporto agli altri. (Luce)"},
+                                        {'text': "E. L'esplorazione del mistero e dell'ignoto. (Oscurità)"}
+                                    ],
+                                    'next': {
+                                        'question': "Come preferisci trascorrere una serata?",
+                                        'options': [
+                                            {'text': "A. Leggendo un libro interessante o studiando qualcosa di nuovo. (Mente)"},
+                                            {'text': "B. Facendo una passeggiata o esercizio fisico. (Vita)"},
+                                            {'text': "C. Meditando o ascoltando musica rilassante. (Vuoto)"},
+                                            {'text': "D. Passando del tempo con amici e familiari. (Luce)"},
+                                            {'text': "E. Guardando un film horror o leggendo un libro misterioso. (Oscurità)"}
+                                        ],
+                                        'next': {
+                                            'question': "Qual è la tua visione della felicità?",
+                                            'options': [
+                                                {'text': "A. Comprendere e conoscere sempre di più. (Mente)"},
+                                                {'text': "B. Vivere una vita piena e attiva. (Vita)"},
+                                                {'text': "C. Trovare pace e serenità dentro di sé. (Vuoto)"},
+                                                {'text': "D. Condividere gioia e luce con gli altri. (Luce)"},
+                                                {'text': "E. Scoprire i segreti nascosti della vita. (Oscurità)"}
+                                            ],
+                                            'result': ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         },
         "Bianco": {
             'question': "Qual è il tuo film preferito?",
