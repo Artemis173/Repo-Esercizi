@@ -895,7 +895,9 @@ def main():
     print(answers)
     print("Fuoco ",answers.count("1"),"\nAcqua ",answers.count("2"),
           "\nTerra ",answers.count("3"),"\nAria ",answers.count("4"),
-          "\nCristallo ",answers.count("5"))
+          "\nCristallo ",answers.count("5"),"\nMente ",answers.count("6"),"\nVita ",answers.count("7"),
+          "\nVuoto ",answers.count("8"),"\nLuce ",answers.count("9"),
+          "\nOscurità ",answers.count("10"))
 
 if __name__ == "__main__":
     main()
