@@ -256,34 +256,24 @@ def main():
                                         {'text': "E. La ricerca della verità e della bellezza nel mondo. (Cristallo)"}
                                     ],
                                     'next': {
-                                        'question': "Come preferisci trascorrere una serata?",
+                                        'question': "Cosa ti attrae di più in una relazione?",
                                         'options': [
-                                            {'text': "A. Partecipando a un evento emozionante o una festa. (Fuoco)"},
-                                            {'text': "B. Rilassandoti con una cena tranquilla e una buona lettura. (Acqua)"},
-                                            {'text': "C. Trascorrendo del tempo con amici o familiari vicini. (Terra)"},
-                                            {'text': "D. Esplorando una nuova attività o luogo. (Aria)"},
-                                            {'text': "E. Creando qualcosa di nuovo o riflettendo su idee creative. (Cristallo)"}
+                                            {'text': "A. Passione e intensità emotiva. (Fuoco)"},
+                                            {'text': "B. Empatia e comprensione reciproca. (Acqua)"},
+                                            {'text': "C. Stabilità e fiducia reciproca. (Terra)"},
+                                            {'text': "D. Avventura e crescita insieme. (Aria)"},
+                                            {'text': "E. Condivisione di ideali e visioni comuni. (Cristallo)"}
                                         ],
                                         'next': {
-                                            'question': "Cosa ti attrae di più in una relazione?",
+                                            'question': "Qual è la tua visione della felicità?",
                                             'options': [
-                                                {'text': "A. Passione e intensità emotiva. (Fuoco)"},
-                                                {'text': "B. Empatia e comprensione reciproca. (Acqua)"},
-                                                {'text': "C. Stabilità e fiducia reciproca. (Terra)"},
-                                                {'text': "D. Avventura e crescita insieme. (Aria)"},
-                                                {'text': "E. Condivisione di ideali e visioni comuni. (Cristallo)"}
+                                                {'text': "A. Realizzare i miei sogni e passioni. (Fuoco)"},
+                                                {'text': "B. Vivere in armonia con me stesso e gli altri. (Acqua)"},
+                                                {'text': "C. Avere una vita stabile e soddisfacente. (Terra)"},
+                                                {'text': "D. Esplorare il mondo e le sue infinite possibilità. (Aria)"},
+                                                {'text': "E. Realizzare il mio pieno potenziale e contribuire al benessere degli altri. (Cristallo)"}
                                             ],
-                                            'next': {
-                                                'question': "Qual è la tua visione della felicità?",
-                                                'options': [
-                                                    {'text': "A. Realizzare i miei sogni e passioni. (Fuoco)"},
-                                                    {'text': "B. Vivere in armonia con me stesso e gli altri. (Acqua)"},
-                                                    {'text': "C. Avere una vita stabile e soddisfacente. (Terra)"},
-                                                    {'text': "D. Esplorare il mondo e le sue infinite possibilità. (Aria)"},
-                                                    {'text': "E. Realizzare il mio pieno potenziale e contribuire al benessere degli altri. (Cristallo)"}
-                                                ],
-                                                'result': ""
-                                            }
+                                            'result': ""
                                         }
                                     }
                                 }
@@ -357,15 +347,6 @@ def main():
                                         {"text": "e) L'esplorazione di nuove opportunità e esperienze. (Tutti)"}
                                     ],
                                     'next': {
-                                        'question': "Come preferisci trascorrere una serata?",
-                                        "options": [
-                                            {"text": "a) Seguendo una routine ben strutturata. (Ordine)"},
-                                            {"text": "b) Esplorando nuovi luoghi o idee. (Origine)"},
-                                            {"text": "c) Svolgendo attività pratiche o sociali. (Realtà)"},
-                                            {"text": "d) Lasciandomi guidare dall'istinto e dalle circostanze. (Nessuno)"},
-                                            {"text": "e) Proponendo o partecipando a varie attività. (Tutti)"}
-                                        ],
-                                        'next': {
                                             'question': "Qual è la tua visione della felicità?",
                                             "options": [
                                                 {"text": "a) Vedere il mondo come un luogo ordinato e regolato da regole. (Ordine)"},
@@ -374,7 +355,7 @@ def main():
                                                 {"text": "d) Vedere il mondo come un luogo in costante cambiamento e adattamento. (Nessuno)"},
                                                 {"text": "e) Vedere il mondo come un luogo complesso e interconnesso. (Tutti)"}
                                             ],
-                                            'result': ""
+                                            'result': ""   
                                         }                                  
                                     }
                                 }
@@ -382,8 +363,7 @@ def main():
                         }
                     }
                 }
-            }
-        },
+            },
         "Blu": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
@@ -538,15 +518,6 @@ def main():
                                         {'text': "D. L'esplorazione e la scoperta di nuovi orizzonti. (Aria)"},
                                         {'text': "E. La ricerca della verità e della bellezza nel mondo. (Cristallo)"}
                                     ],
-                                    'next': {
-                                        'question': "Come preferisci trascorrere una serata?",
-                                        'options': [
-                                            {'text': "A. Partecipando a un evento emozionante o una festa. (Fuoco)"},
-                                            {'text': "B. Rilassandoti con una cena tranquilla e una buona lettura. (Acqua)"},
-                                            {'text': "C. Trascorrendo del tempo con amici o familiari vicini. (Terra)"},
-                                            {'text': "D. Esplorando una nuova attività o luogo. (Aria)"},
-                                            {'text': "E. Creando qualcosa di nuovo o riflettendo su idee creative. (Cristallo)"}
-                                        ],
                                         'next': {
                                             'question': "Cosa ti attrae di più in una relazione?",
                                             'options': [
@@ -564,7 +535,8 @@ def main():
                                                     {'text': "C. Avere una vita stabile e soddisfacente. (Terra)"},
                                                     {'text': "D. Esplorare il mondo e le sue infinite possibilità. (Aria)"},
                                                     {'text': "E. Realizzare il mio pieno potenziale e contribuire al benessere degli altri. (Cristallo)"}
-                                                ]
+                                                ],
+                                                'result': ""
                                             }
                                         }
                                     }
@@ -573,8 +545,7 @@ def main():
                         }
                     }
                 }
-            }
-        },
+            },
         "Arancio-Giallo": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             "options": [
@@ -639,15 +610,6 @@ def main():
                                         {"text": "e) L'esplorazione di nuove opportunità e esperienze. (Tutti)"}
                                     ],
                                     'next': {
-                                        'question': "Come preferisci trascorrere una serata?",
-                                        "options": [
-                                            {"text": "a) Seguendo una routine ben strutturata. (Ordine)"},
-                                            {"text": "b) Esplorando nuovi luoghi o idee. (Origine)"},
-                                            {"text": "c) Svolgendo attività pratiche o sociali. (Realtà)"},
-                                            {"text": "d) Lasciandomi guidare dall'istinto e dalle circostanze. (Nessuno)"},
-                                            {"text": "e) Proponendo o partecipando a varie attività. (Tutti)"}
-                                        ],
-                                        'next': {
                                             'question': "Qual è la tua visione della felicità?",
                                             "options": [
                                                 {"text": "a) Vedere il mondo come un luogo ordinato e regolato da regole. (Ordine)"},
@@ -656,7 +618,7 @@ def main():
                                                 {"text": "d) Vedere il mondo come un luogo in costante cambiamento e adattamento. (Nessuno)"},
                                                 {"text": "e) Vedere il mondo come un luogo complesso e interconnesso. (Tutti)"}
                                             ],
-                                            'result': ""
+                                            'result': ""   
                                         }                                  
                                     }
                                 }
@@ -664,8 +626,7 @@ def main():
                         }
                     }
                 }
-            }  
-        },
+            },
         "Verde-Giallo": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             "options": [
@@ -730,15 +691,6 @@ def main():
                                         {"text": "e) L'esplorazione di nuove opportunità e esperienze. (Tutti)"}
                                     ],
                                     'next': {
-                                        'question': "Come preferisci trascorrere una serata?",
-                                        "options": [
-                                            {"text": "a) Seguendo una routine ben strutturata. (Ordine)"},
-                                            {"text": "b) Esplorando nuovi luoghi o idee. (Origine)"},
-                                            {"text": "c) Svolgendo attività pratiche o sociali. (Realtà)"},
-                                            {"text": "d) Lasciandomi guidare dall'istinto e dalle circostanze. (Nessuno)"},
-                                            {"text": "e) Proponendo o partecipando a varie attività. (Tutti)"}
-                                        ],
-                                        'next': {
                                             'question': "Qual è la tua visione della felicità?",
                                             "options": [
                                                 {"text": "a) Vedere il mondo come un luogo ordinato e regolato da regole. (Ordine)"},
@@ -747,7 +699,7 @@ def main():
                                                 {"text": "d) Vedere il mondo come un luogo in costante cambiamento e adattamento. (Nessuno)"},
                                                 {"text": "e) Vedere il mondo come un luogo complesso e interconnesso. (Tutti)"}
                                             ],
-                                            'result': ""
+                                            'result': ""   
                                         }                                  
                                     }
                                 }
@@ -755,8 +707,7 @@ def main():
                         }
                     }
                 }
-            }
-        },
+            },
         "Verde-Blu": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
@@ -911,15 +862,6 @@ def main():
                                         {'text': "D. L'esplorazione e la scoperta di nuovi orizzonti. (Aria)"},
                                         {'text': "E. La ricerca della verità e della bellezza nel mondo. (Cristallo)"}
                                     ],
-                                    'next': {
-                                        'question': "Come preferisci trascorrere una serata?",
-                                        'options': [
-                                            {'text': "A. Partecipando a un evento emozionante o una festa. (Fuoco)"},
-                                            {'text': "B. Rilassandoti con una cena tranquilla e una buona lettura. (Acqua)"},
-                                            {'text': "C. Trascorrendo del tempo con amici o familiari vicini. (Terra)"},
-                                            {'text': "D. Esplorando una nuova attività o luogo. (Aria)"},
-                                            {'text': "E. Creando qualcosa di nuovo o riflettendo su idee creative. (Cristallo)"}
-                                        ],
                                         'next': {
                                             'question': "Cosa ti attrae di più in una relazione?",
                                             'options': [
@@ -937,7 +879,8 @@ def main():
                                                     {'text': "C. Avere una vita stabile e soddisfacente. (Terra)"},
                                                     {'text': "D. Esplorare il mondo e le sue infinite possibilità. (Aria)"},
                                                     {'text': "E. Realizzare il mio pieno potenziale e contribuire al benessere degli altri. (Cristallo)"}
-                                                ]
+                                                ],
+                                                'result': ""
                                             }
                                         }
                                     }
@@ -946,8 +889,7 @@ def main():
                         }
                     }
                 }
-            }
-        },
+            },
         "Viola-Blu": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
@@ -1194,15 +1136,6 @@ def main():
                                         {"text": "e) L'esplorazione di nuove opportunità e esperienze. (Tutti)"}
                                     ],
                                     'next': {
-                                        'question': "Come preferisci trascorrere una serata?",
-                                        "options": [
-                                            {"text": "a) Seguendo una routine ben strutturata. (Ordine)"},
-                                            {"text": "b) Esplorando nuovi luoghi o idee. (Origine)"},
-                                            {"text": "c) Svolgendo attività pratiche o sociali. (Realtà)"},
-                                            {"text": "d) Lasciandomi guidare dall'istinto e dalle circostanze. (Nessuno)"},
-                                            {"text": "e) Proponendo o partecipando a varie attività. (Tutti)"}
-                                        ],
-                                        'next': {
                                             'question': "Qual è la tua visione della felicità?",
                                             "options": [
                                                 {"text": "a) Vedere il mondo come un luogo ordinato e regolato da regole. (Ordine)"},
@@ -1211,7 +1144,7 @@ def main():
                                                 {"text": "d) Vedere il mondo come un luogo in costante cambiamento e adattamento. (Nessuno)"},
                                                 {"text": "e) Vedere il mondo come un luogo complesso e interconnesso. (Tutti)"}
                                             ],
-                                            'result': ""
+                                            'result': ""   
                                         }                                  
                                     }
                                 }
@@ -1219,8 +1152,7 @@ def main():
                         }
                     }
                 }
-            }
-        },
+            },
         "Nero": {
             'question': "Quando sei sotto pressione, qual è la tua reazione tipica?",
             'options': [
@@ -1284,15 +1216,6 @@ def main():
                                         {'text': "D. L'esplorazione e la scoperta di nuovi orizzonti. (Aria)"},
                                         {'text': "E. La ricerca della verità e della bellezza nel mondo. (Cristallo)"}
                                     ],
-                                    'next': {
-                                        'question': "Come preferisci trascorrere una serata?",
-                                        'options': [
-                                            {'text': "A. Partecipando a un evento emozionante o una festa. (Fuoco)"},
-                                            {'text': "B. Rilassandoti con una cena tranquilla e una buona lettura. (Acqua)"},
-                                            {'text': "C. Trascorrendo del tempo con amici o familiari vicini. (Terra)"},
-                                            {'text': "D. Esplorando una nuova attività o luogo. (Aria)"},
-                                            {'text': "E. Creando qualcosa di nuovo o riflettendo su idee creative. (Cristallo)"}
-                                        ],
                                         'next': {
                                             'question': "Cosa ti attrae di più in una relazione?",
                                             'options': [
@@ -1322,7 +1245,6 @@ def main():
                 }
             }
         }
-    }
     # Inizio del questionario
     answers = []
     color_choice = ask_questions(color_class, answers)
