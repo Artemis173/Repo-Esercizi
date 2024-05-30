@@ -893,7 +893,10 @@ def main():
     print(color_choice)
     ask_final_questions(final_question_trees[color_choice], answers)
     print(answers)
-    print("Fuoco ",answers.count("1"),"\nAcqua ",answers.count("2"),
+    if answers[1] == 'Blu': 
+        print()
+    else:
+        print("Fuoco ",answers.count("1"),"\nAcqua ",answers.count("2"),
           "\nTerra ",answers.count("3"),"\nAria ",answers.count("4"),
           "\nCristallo ",answers.count("5"))
 
