@@ -1346,4 +1346,3 @@ if __name__ == "__main__":
     main()
 
 # Funziona fino a prova contraria
-
