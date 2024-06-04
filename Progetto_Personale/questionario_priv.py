@@ -1285,7 +1285,7 @@ def main():
             }
         }
     }
-    # Inizio del questionario
+    # Inizio del questionario 
     answers = []
     color_choice = ask_questions(color_class, answers)
     print(color_choice)
@@ -1307,4 +1307,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Funziona fino a prova contraria
+# Funziona fino a prova contraria, FROCIO  CIUCCIA PISELLI!!!
