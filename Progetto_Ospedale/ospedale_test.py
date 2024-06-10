@@ -1,38 +1,48 @@
-# driver.py
+class Persona:
+    def __init__(self, first_name, last_name, age=0):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-from dottore import Dottore
-from paziente import Paziente
-from fattura import Fattura
+    def setName(self, first_name):
+        self.first_name = first_name
 
-doctor1 = Dottore("Mario", "Rossi", "Pediatra", 100.0)
-doctor2 = Dottore("Luigi", "Verdi", "Ostetrico", 150.0)
+    def setLastName(self, last_name):
+        self.last_name = last_name
 
-doctor1.setAge(40)
-doctor2.setAge(35)
-
-doctor1.doctorGreet()
-doctor2.doctorGreet()
-
-patient1 = Paziente("Anna", "Bianchi", "P1")
-patient2 = Paziente("Giulia", "Neri", "P2")
-patient3 = Paziente("Luca", "Rossi", "P3")
-patient4 = Paziente("Marco", "Verdi", "P4")
+    def setAge(self, age):
+        self.age = age
 
 
-patients_list1 = [patient1, patient2, patient3]
-patients_list2 = [patient4]
+class Dottore(Persona):
+    def __init__(self, first_name, last_name, specialization, fee):
+        super().__init__(first_name, last_name)
+        self.specialization = specialization
+        self.fee = fee
 
-fattura1 = Fattura(patients_list1, doctor1)
-fattura2 = Fattura(patients_list2, doctor2)
+    def isValidDoctor(self):
+        return self.age >= 25 and self.age <= 70
 
-print(f"Salario Dottore1: {fattura1.getSalary()} euro!")
-print(f"Salario Dottore2: {fattura2.getSalary()} euro!")
 
-fattura1.removePatient("P2")
-fattura2.addPatient(patient2)
+class Paziente(Persona):
+    def __init__(self, first_name, last_name, patient_id):
+        super().__init__(first_name, last_name)
+        self.patient_id = patient_id
 
-print(f"Salario Dottore1: {fattura1.getSalary()} euro!")
-print(f"Salario Dottore2: {fattura2.getSalary()} euro!")
 
-total_earnings = fattura1.getSalary() + fattura2.getSalary()
-print(f"In totale, l'ospedale ha incassato: {total_earnings} euro!")
+class Fattura:
+    def __init__(self, patients, doctor):
+        self.patients = patients
+        self.doctor = doctor
+
+    def calculateSalary(self):
+        return self.doctor.fee * len(self.patients)
+
+    def getInvoiceCount(self):
+        return len(self.patients)
+
+    def addPatient(self, patient):
+        self.patients.append(patient)
+
+    def removePatient(self, patient):
+        self.patients.remove(patient)
