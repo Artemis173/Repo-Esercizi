@@ -14,4 +14,50 @@
 #    isAValidDoctor(): stabilisce se un dottore è un dottore valido; un dottore è valido se e solo se ha più di 30 anni, in quanto ha avuto il tempo necessario di compiere i suoi studi in medicina. Stampare "Doctor nome e cognome is valid!", se il dottore risulta valido. In caso contrario, stampare "Doctor nome e cognome is not valid!".
 #    doctorGreet():tale metodo richiama la funzione greet() della classe Persona. Poi, stampa il seguente saluto "Sono un medico {specializzazione}"
 
-from persona.py import Persona
+from persona import Persona
+
+class Dottore(Persona):
+    def __init__(self, first_name, last_name, specialization, parcel):
+        super().__init__(first_name, last_name)
+        if isinstance(specialization, str):
+            self.__specialization = specialization
+        else:
+            self.__specialization = None
+            print("The specialization insert is not a string")
+
+        
+        if isinstance(parcel, float):
+            self.__parcel = parcel
+        else:
+            self.__parcel = None
+            print("The parcel insert is not a float")
+
+    def setSpecialization(self, specialization):
+        if isinstance(specialization, str):
+            self.__specialization = specialization
+        else:
+            self.__specialization = None
+            print("The specialization insert is not a string")
+
+    def setParcel(self, parcel):
+        if isinstance(parcel, float):
+            self.__parcel = parcel
+        else:
+            self.__parcel = None
+            print("The parcel insert is not a float")
+
+    def getSpecialization(self):
+        return self.__specialization
+    
+    def getParcel(self):
+        return self.__parcel
+    
+    def isAValidDoctor(self):
+        if self.getAge() > 30:
+            print(f"Doctor {self.getName()} {self.getLastName()} is valid!")
+        else:
+            print(f"Doctor {self.getName()} {self.getLastName()} is not valid!")
+
+    def doctorGreet(self):
+        self.greet()
+        print(f"Sono un medico {self.__specialization}")

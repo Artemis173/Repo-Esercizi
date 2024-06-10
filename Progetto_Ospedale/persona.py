@@ -13,7 +13,7 @@
 #    greet(): stampa il seguente saluto "Ciao, sono nome cognome! Ho età anni!"
 
 class Persona:
-    def init(self, first_name, last_name):
+    def __init__(self, first_name, last_name):
         if isinstance(first_name, str):
             self.first_name = first_name
         else:
