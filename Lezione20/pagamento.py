@@ -60,15 +60,15 @@ class Pagamento:
 
 
 class PagamentoContanti(Pagamento):
-    def __init__(self, importo):
+    def __init__(self):
         super().__init__()
-        self.set_importo(importo)
 
     def dettagliPagamento(self):
-        print(f"L'importo del pagamento è: €{self.get_importo():.2f}")
+        importo = self.get()
+        print(f"L'importo del pagamento è: €{importo:.2f}")
 
     def inPezziDa(self):
-        importo = self.get_importo()
+        importo = self.get()
         pezzi = {
             500: 0,
             200: 0,
@@ -97,16 +97,15 @@ class PagamentoContanti(Pagamento):
 
 
 class PagamentoCartaDiCredito(Pagamento):
-    def __init__(self, importo, titolare, scadenza, numero):
+    def __init__(self, titolare, scadenza, numero):
         super().__init__()
-        self.set_importo(importo)
         self.__titolare = titolare
         self.__scadenza = scadenza
         self.__numero = numero
 
     def dettagliPagamento(self):
         print(f"Pagamento in contanti:\n"
-              f"€{self.get_importo():.2f}\n"
+              f"€{self.get():.2f}\n"
               f"Titolare: {self.__titolare}\n"
               f"Scadenza: {self.__scadenza}\n"
               f"Numero: {self.__numero}")
