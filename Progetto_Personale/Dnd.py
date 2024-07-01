@@ -1,8 +1,7 @@
 import random
-
 # Definizione delle classi dei personaggi
 class Character:
-    def _init_(self, name, char_class, hp, strength, dex, intelligence, equipment):
+    def __init__(self, name, char_class, hp, strength, dex, intelligence, equipment, gold):
         self.name = name
         self.char_class = char_class
         self.hp = hp
@@ -10,6 +9,7 @@ class Character:
         self.dex = dex
         self.intelligence = intelligence
         self.equipment = equipment
+        self.gold = 0
 
     def heal(self):
         heal_amount = random.randint(5, 15)
@@ -20,9 +20,13 @@ class Character:
         self.hp = 20  # Supponiamo che 20 sia il massimo HP
         print(f"{self.name} è completamente guarito e ora ha {self.hp} HP.")
 
+    def add_gold(self, amount):
+        self.gold += amount
+        print(f"{self.name} ha acquisito {amount} oro e ora ha {self.gold} oro.")
+
 # Definizione della classe dei mostri
 class Monster:
-    def _init_(self, name, hp, strength, dex, intelligence, equipment):
+    def __init__(self, name, hp, strength, dex, intelligence, equipment):
         self.name = name
         self.hp = hp
         self.strength = strength
@@ -44,9 +48,9 @@ def create_monster():
     return Monster(name, hp, strength, dex, intelligence, equipment)
 
 # Creazione dei personaggi
-aric = Character("Aric", "Guerriero", 20, 15, 10, 8, ["Spada lunga", "Scudo", "Armatura a piastre"])
-lyra = Character("Lyra", "Mago", 12, 8, 12, 16, ["Bastone magico", "Mantello", "Libro degli incantesimi"])
-finn = Character("Finn", "Ladro", 15, 10, 16, 10, ["Pugnali", "Mantello dell'ombra", "Kit da scasso"])
+aric = Character("Aric","Guerriero",20,15,10,8,['Spada lunga','Scudo','Armatura a piastre'], 0)
+lyra = Character("Lyra","Mago",12,8,12,16,['Bastone magico','Mantello','Libro degli incantesimi'], 0)
+finn = Character("Finn","Ladro",15,10,16,10,['Pugnali',"Mantello dell'ombra",'Kit da scasso'], 0)
 
 # Funzione per tirare il dado
 def roll_dice(sides):
@@ -136,7 +140,15 @@ def explore(characters):
                 monsters = [monster]
                 if not combat(characters, monsters):
                     break
+        
+        if room == "Stanza di ricerca dell'artefatto":
+            for character in characters:
+                search_artifact(character)
 
+        if room == "Stanza del tesoro":
+            for character in characters:
+                character.add_gold(100)
+        
         for character in characters:
             if character.hp < 10:
                 heal_decision = input(f"{character.name} ha {character.hp} HP. Vuoi curarti? (s/n): ").lower()
@@ -165,7 +177,7 @@ def search_artifact(character):
 
 # Funzione per stampare lo stato dei personaggi
 def print_character_status(character):
-    print(f"{character.name}: HP: {character.hp}")
+    print(f"{character.name}: HP: {character.hp}, Oro: {character.gold}")
 
 # Stato iniziale dei personaggi
 print("Stato iniziale dei personaggi:")
@@ -179,7 +191,7 @@ explore(characters)
 
 # Ricerca dell'artefatto
 print("Ricerca dell'artefatto:")
-search_artifact(aric)
+search_artifact(aric) 
 search_artifact(lyra)
 search_artifact(finn)
 
