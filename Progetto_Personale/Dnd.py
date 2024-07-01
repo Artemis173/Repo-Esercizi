@@ -133,7 +133,7 @@ def explore(characters):
         if room == "Stanza di ristoro rapido":
             for character in characters:
                 character.full_heal()
-            roll = roll_dice(20)
+            roll = roll_dice(20) 
             if roll <= 10:
                 print("Sei stato imboscato!")
                 monster = create_monster()
