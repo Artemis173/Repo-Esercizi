@@ -1,13 +1,13 @@
 import random
 
 class Character:
-    def _init_(self, name, char_class, hp, str, dex, int, equipment):
+    def __init__(self, name, char_class, hp, strength, dex, intelligence, equipment):
         self.name = name
         self.char_class = char_class
         self.hp = hp
-        self.str = str
+        self.strength = strength
         self.dex = dex
-        self.int = int
+        self.intelligence = intelligence
         self.equipment = equipment
 
 aric = Character("Aric", "Guerriero", 20, 15, 10, 8, ["Spada lunga", "Scudo", "Armatura a piastre"])
@@ -22,9 +22,9 @@ def roll_dice(sides):
 def combat(attacker, defender):
     roll = roll_dice(20)
     if attacker.char_class == "Guerriero":
-        attack_roll = roll + attacker.str
+        attack_roll = roll + attacker.strength
     elif attacker.char_class == "Mago":
-        attack_roll = roll + attacker.int
+        attack_roll = roll + attacker.intelligence
     elif attacker.char_class == "Ladro":
         attack_roll = roll + attacker.dex
     else:
@@ -43,7 +43,7 @@ combat(goblin, aric)
 
 def search_artifact(character):
     roll = roll_dice(20)
-    if roll + character.int > 15:
+    if roll + character.intelligence > 15:
         print(f"{character.name} trova l'artefatto magico!")
     else:
         print(f"{character.name} non riesce a trovare l'artefatto.")
@@ -57,5 +57,8 @@ def print_character_status(character):
 
 print("Stato finale dei personaggi:")
 print_character_status(aric)
+print_character_status(finn)
+print_character_status(goblin)
+
 print_character_status(lyra)
 print_character_status(finn)  
