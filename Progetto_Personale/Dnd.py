@@ -109,15 +109,32 @@ def generate_rooms():
     random.shuffle(rooms)
     return rooms
 
+# Generazione della mappa 10x10
+def generate_map():
+    room_types = ["Stanza vuota", "Stanza del tesoro", "Stanza del mostro", "Stanza di ristoro rapido"]
+    map_size = 10
+    dungeon_map = [[random.choice(room_types) for _ in range(map_size)] for _ in range(map_size)]
+    dungeon_map[random.randint(0, 9)][random.randint(0, 9)] = "Stanza del tesoro"
+    dungeon_map[random.randint(0, 9)][random.randint(0, 9)] = "Stanza del mostro con Re dei Goblin"
+    return dungeon_map
+
 # Esplorazione delle stanze
 def explore(characters):
     print("Esplorazione delle stanze:")
     directions = ["sinistra", "destra", "avanti", "indietro"]
-    rooms = generate_rooms()
+    dungeon_map = generate_map()
+    explored_rooms = set()
+    current_position = (0, 0)
     room_count = 0
 
     while room_count < 15:
-        room = rooms[room_count]
+        if current_position in explored_rooms:
+            print(f"Sei tornato in una stanza già conquistata.")
+            current_position = move_position(current_position, directions)
+            continue
+        
+        room = dungeon_map[current_position[0]][current_position[1]]
+        explored_rooms.add(current_position)
         print(f"Sei in una {room}.")
         
         if room == "Stanza del mostro" or room == "Stanza del mostro con Re dei Goblin":
@@ -133,7 +150,7 @@ def explore(characters):
         if room == "Stanza di ristoro rapido":
             for character in characters:
                 character.full_heal()
-            roll = roll_dice(20) 
+            roll = roll_dice(20)
             if roll <= 10:
                 print("Sei stato imboscato!")
                 monster = create_monster()
@@ -141,10 +158,6 @@ def explore(characters):
                 if not combat(characters, monsters):
                     break
         
-        if room == "Stanza di ricerca dell'artefatto":
-            for character in characters:
-                search_artifact(character)
-
         if room == "Stanza del tesoro":
             for character in characters:
                 character.add_gold(100)
@@ -159,13 +172,25 @@ def explore(characters):
         if direction not in directions:
             print("Direzione non valida. Riprova.")
         else:
-            print(f"{characters[0].name} va verso {direction}.")
+            current_position = move_position(current_position, direction)
         
         continue_exploring = input("Vuoi continuare ad esplorare? (s/n): ").lower()
         if continue_exploring != 's':
             break
         
         room_count += 1
+
+def move_position(current_position, direction):
+    x, y = current_position
+    if direction == "sinistra":
+        y = max(0, y - 1)
+    elif direction == "destra":
+        y = min(9, y + 1)
+    elif direction == "avanti":
+        x = max(0, x - 1)
+    elif direction == "indietro":
+        x = min(9, x + 1)
+    return (x, y)
 
 # Funzione per la ricerca dell'artefatto
 def search_artifact(character):
