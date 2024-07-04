@@ -1,5 +1,11 @@
 import random
-# Definizione delle classi dei personaggi
+
+class Equipment:
+    def __init__(self, name, attack_bonus, defense_bonus):
+        self.name = name
+        self.attack_bonus = attack_bonus
+        self.defense_bonus = defense_bonus
+
 class Character:
     def __init__(self, name, char_class, hp, strength, dex, intelligence, equipment, gold):
         self.name = name
@@ -9,7 +15,7 @@ class Character:
         self.dex = dex
         self.intelligence = intelligence
         self.equipment = equipment
-        self.gold = 0
+        self.gold = gold
 
     def heal(self):
         heal_amount = random.randint(5, 15)
@@ -37,20 +43,20 @@ class Monster:
 # Creazione dei mostri
 def create_monster():
     monsters = [
-        ("Goblin Guerriero", 10, 12, 10, 6, ["Spada corta"]),
-        ("Goblin Lancieri", 8, 10, 12, 6, ["Lancia"]),
-        ("Goblin Arcieri", 6, 8, 14, 6, ["Arco e frecce"]),
-        ("Goblin", 8, 8, 12, 6, []),
-        ("Goblin Sciamani", 10, 6, 10, 14, ["Bastone magico"]),
-        ("Re dei Goblin", 20, 15, 12, 10, ["Spada lunga", "Armatura"])
+        ("Goblin Guerriero", 10, 12, 10, 6, [Equipment('Spada corta', 1, 0)]),
+        ("Goblin Lancieri", 8, 10, 12, 6, [Equipment('Lancia', 2, 0)]),
+        ("Goblin Arcieri", 6, 8, 14, 6, [Equipment('Arco e frecce', 1, 0)]),
+        ("Goblin", 8, 8, 12, 6, [Equipment('Mani', 0, 0)]),
+        ("Goblin Sciamani", 10, 6, 10, 14, [Equipment('Bastone magico', 1, 0)]),
+        ("Re dei Goblin", 20, 15, 12, 10, [Equipment("Spada lunga", 3, 1), Equipment("Armatura", 0, 4)])
     ]
     name, hp, strength, dex, intelligence, equipment = random.choice(monsters)
     return Monster(name, hp, strength, dex, intelligence, equipment)
 
 # Creazione dei personaggi
-aric = Character("Aric","Guerriero",20,15,10,8,['Spada lunga','Scudo','Armatura a piastre'], 0)
-lyra = Character("Lyra","Mago",12,8,12,16,['Bastone magico','Mantello','Libro degli incantesimi'], 0)
-finn = Character("Finn","Ladro",15,10,16,10,['Pugnali',"Mantello dell'ombra",'Kit da scasso'], 0)
+aric = Character("Aric", "Guerriero", 20, 15, 10, 8, [Equipment('Spada lunga', 3, 1), Equipment('Scudo', 0, 2), Equipment('Armatura a piastre', 0, 4)], 0)
+lyra = Character("Lyra", "Mago", 12, 8, 12, 16, [Equipment('Bastone magico', 1, 0), Equipment('Mantello', 0, 1), Equipment('Libro degli incantesimi', 2, 0)], 0)
+finn = Character("Finn", "Ladro", 15, 10, 16, 10, [Equipment('Pugnali', 2, 0), Equipment("Mantello dell'ombra", 0, 2), Equipment('Kit da scasso', 1, 0)], 0)
 
 # Funzione per tirare il dado
 def roll_dice(sides):
@@ -65,22 +71,29 @@ def combat(characters, monsters):
         
         if attacker.hp > 0 and defender.hp > 0:
             roll = roll_dice(20)
+            attack_bonus = 0
+            if len(attacker.equipment) > 1:
+                attack_bonus = sum(equip.attack_bonus for equip in attacker.equipment)
             if isinstance(attacker, Character):
                 if attacker.char_class == "Guerriero":
-                    attack_roll = roll + attacker.strength
+                    attack_roll = roll + attacker.strength + attack_bonus
                 elif attacker.char_class == "Mago":
-                    attack_roll = roll + attacker.intelligence
+                    attack_roll = roll + attacker.intelligence + attack_bonus
                 elif attacker.char_class == "Ladro":
-                    attack_roll = roll + attacker.dex
+                    attack_roll = roll + attacker.dex + attack_bonus
                 else:
-                    attack_roll = roll + attacker.strength
+                    attack_roll = roll + attacker.strength + attack_bonus
             else:
-                attack_roll = roll + attacker.strength
+                attack_roll = roll + attacker.strength + attack_bonus
             
             if attack_roll > 10:  # Supponiamo che la Classe Armatura (CA) sia 10
                 damage = roll_dice(8)
-                defender.hp -= damage
-                print(f"{attacker.name} attacca {defender.name} e infligge {damage} danni!")
+                defense_bonus = 0
+                if len(defender.equipment) > 1:
+                    defense_bonus = sum(equip.defense_bonus for equip in defender.equipment)
+                actual_damage = max(0, damage - defense_bonus)
+                defender.hp -= actual_damage
+                print(f"{attacker.name} attacca {defender.name} e infligge {actual_damage} danni!")
                 if defender.hp <= 0:
                     print(f"{defender.name} è stato sconfitto!")
                     if isinstance(defender, Monster):
@@ -116,12 +129,13 @@ def generate_map():
     dungeon_map = [[random.choice(room_types) for _ in range(map_size)] for _ in range(map_size)]
     dungeon_map[random.randint(0, 9)][random.randint(0, 9)] = "Stanza del tesoro"
     dungeon_map[random.randint(0, 9)][random.randint(0, 9)] = "Stanza del mostro con Re dei Goblin"
+    dungeon_map[random.randint(0, 9)][random.randint(0, 9)] = "Stanza degli artefatti"
     return dungeon_map
 
 # Esplorazione delle stanze
 def explore(characters):
     print("Esplorazione delle stanze:")
-    directions = ["sinistra", "destra", "avanti", "indietro"]
+    directions = ["sinistra", "destra", "sopra", "sotto"]
     dungeon_map = generate_map()
     explored_rooms = set()
     current_position = (0, 0)
@@ -131,15 +145,14 @@ def explore(characters):
         if current_position in explored_rooms:
             print(f"Sei tornato in una stanza già conquistata.")
             current_position = move_position(current_position, directions)
-            continue
         
         room = dungeon_map[current_position[0]][current_position[1]]
         explored_rooms.add(current_position)
         print(f"Sei in una {room}.")
         
-        if room == "Stanza del mostro" or room == "Stanza del mostro con Re dei Goblin":
+        if room == "Stanza del mostro" or room == "Stanza del mostro con Re dei Goblin" and current_position not in explored_rooms:
             if room == "Stanza del mostro con Re dei Goblin":
-                monster = Monster("Re dei Goblin", 20, 15, 12, 10, ["Spada lunga", "Armatura"])
+                monster = Monster("Re dei Goblin", 20, 15, 12, 10, [Equipment("Spada lunga", 3, 1), Equipment("Armatura", 0, 4)])
             else:
                 monster = create_monster()
             print(f"Un {monster.name} appare!")
@@ -147,28 +160,32 @@ def explore(characters):
             if not combat(characters, monsters):
                 break
         
-        if room == "Stanza di ristoro rapido":
+        if room == "Stanza di ristoro rapido" and current_position not in explored_rooms:
             for character in characters:
                 character.full_heal()
             roll = roll_dice(20)
             if roll <= 10:
-                print("Sei stato imboscato!")
+                print("Sei stato imboscato!") 
                 monster = create_monster()
                 monsters = [monster]
                 if not combat(characters, monsters):
                     break
         
-        if room == "Stanza del tesoro":
+        if room == "Stanza del tesoro" and current_position not in explored_rooms:
             for character in characters:
                 character.add_gold(100)
+        
+        if room == "Stanza degli artefatti":
+            for character in characters:
+                search_artifact(character)
         
         for character in characters:
             if character.hp < 10:
                 heal_decision = input(f"{character.name} ha {character.hp} HP. Vuoi curarti? (s/n): ").lower()
                 if heal_decision == 's':
                     character.heal()
-
-        direction = input("In quale direzione vuoi andare? (sinistra/destra/avanti/indietro): ").lower()
+        print("\npos: ",current_position)
+        direction = input("In quale direzione vuoi andare? (sinistra/destra/sopra/sotto): ").lower()
         if direction not in directions:
             print("Direzione non valida. Riprova.")
         else:
@@ -183,13 +200,29 @@ def explore(characters):
 def move_position(current_position, direction):
     x, y = current_position
     if direction == "sinistra":
-        y = max(0, y - 1)
+        if y-1 < 0:
+            y = 0
+            print("C'è un cazzo di muro dove vuoi andare?")
+        else:
+            y -= 1
     elif direction == "destra":
-        y = min(9, y + 1)
-    elif direction == "avanti":
-        x = max(0, x - 1)
-    elif direction == "indietro":
-        x = min(9, x + 1)
+        if y+1 > 9:
+            y = 9
+            print("C'è un cazzo di muro dove vuoi andare?")
+        else:
+            y += 1
+    elif direction == "sopra":
+        if x+1 > 9:
+            x = 9
+            print("C'è un cazzo di muro dove vuoi andare?")
+        else:
+            x += 1
+    elif direction == "sotto":
+        if x-1 < 0:
+            x = 0
+            print("C'è un cazzo di muro dove vuoi andare?")
+        else:
+            x -= 1
     return (x, y)
 
 # Funzione per la ricerca dell'artefatto
@@ -215,10 +248,10 @@ characters = [aric, lyra, finn]
 explore(characters)
 
 # Ricerca dell'artefatto
-print("Ricerca dell'artefatto:")
-search_artifact(aric) 
-search_artifact(lyra)
-search_artifact(finn)
+#print("Ricerca dell'artefatto:")
+#search_artifact(aric) 
+#search_artifact(lyra)
+#search_artifact(finn)
 
 # Stato finale dei personaggi
 print("Stato finale dei personaggi:")
