@@ -258,3 +258,6 @@ print("Stato finale dei personaggi:")
 print_character_status(aric)
 print_character_status(lyra)
 print_character_status(finn)
+
+
+# AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
