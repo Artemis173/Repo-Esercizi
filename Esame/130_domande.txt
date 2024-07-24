@@ -1,0 +1,419 @@
+Quale metodo viene utilizzato per verificare se una condizione è vera in unittest?
+assertTrue
+
+Cosa succede se un'asserzione fallisce?
+Viene sollevata un'AssertionError
+
+Qual è il comportamento della funzione passata come argomento senza parentesi?
+Viene passata solo una referenza alla funzione senza eseguirla
+
+Come si chiamano gli strumenti e i servizi necessari per costruire,
+eseguire e distribuire applicazioni containerizzate?
+Container engine
+
+Qual è il risultato dell'istruzione assert 1 < 0?
+AssertionError
+
+Cosa fa il comando "docker build -t mytesting ." ?
+Costruisce un'immagine Docker con il tag mytesting
+
+Qual è un altro vantaggio dei container rispetto alle VM?
+Efficienza
+
+Cosa rappresenta un programma CPU-bound?
+Un programma che spinge la CPU al limite
+
+Quando è preferibile utilizzare il multiprocessing rispetto al threading?
+Quando si eseguono operazioni CPU-bound
+
+Quale convenzione devono seguire gli header dei metodi di test in unittest?
+I nomi dei metodi devono iniziare con la parola test
+
+Quale metodo di lettura legge una singola linea alla volta fino a incontrare il token EOF?
+readline()
+
+Come si passa un messaggio personalizzato a un'asserzione in Python?
+assert condizione as 'messaggio'
+
+Quale metodo viene utilizzato per verificare se un valore è True in unittest?
+assertTrue
+
+
+Quale metodo viene utilizzato per proteggere le variabili condivise in un ambiente multi-thread?
+Aggiungere Lock
+
+Qual è il formato di default per aprire un file in Python?
+'r'
+
+Cosa virtualizzano le macchine virtuali (VM)?
+L'Hardware
+
+Cosa rappresenta un thread in Python?
+Un flusso separato di esecuzione
+
+Che cosa significa GIL in Python?
+Global Interpreter Lock
+
+Qual è il comando per eseguire un contenitore Docker?
+Docker run
+
+Qual è uno svantaggio delle macchine virtuali (VM)?
+Consumo maggiore di risorse
+
+Qual è uno dei vantaggi principali dei container?
+Portabilità
+
+Cosa verifica il metodo assertIsNone in unittest?
+Verifica se una variabile è None
+
+Qual è la funzione principale del GIL (Global Interpreter Lock) in Python?
+Limitare l'esecuzione a un solo thread alla volta
+
+Qual è il vantaggio dell'utilizzo di Docker in sviluppo?
+Assicura che l'applicazione funzioni allo stesso modo in diversi ambienti
+
+Cosa fa l'istruzione else in un blocco try-except?
+Esegue un blocco di codice solo in assenza di eccezioni
+
+Qual è lo scopo del metodo assertRaises in unittest?
+Verificare se viene sollevata un'eccezione specifica
+
+Che cos'è un deadlock in un contesto di multiprocessing?
+Una situazione in cui due o più processi si bloccano a vicenda aspettando risorse
+
+Qual è il metodo utilizzato per scrivere una lista di stringhe in un file?
+writelines()
+
+Quale funzione deve essere passata a un'istanza di Thread?
+Una funzione da eseguire nel nuovo thread
+
+Cosa succede se non si utilizza il metodo join in un programma con multiprocessing?
+Il programma principale può terminare prima che i processi figli abbiano finito
+
+Quale comando esegue i test unittest in modalità verbosa?
+python -m unittest -v
+
+Quale eccezione viene sollevata quando si tenta di dividere un numero per zero?
+ZeroDivisionError
+
+Quale metodo viene eseguito prima di ogni test in una classe di test unittest?
+setUp()
+
+Come si può creare un'eccezione personalizzata in Python?
+Ereditando da Exception
+
+Cosa specifica l'istruzione "CMD" in un Dockerfile?
+Il comando da eseguire quando il container viene avviato
+
+Come si definisce una funzione all'interno di un'altra funzione in Python?
+Inner function
+
+Quale problema risolvono i container rispetto alle VM in termini di portabilità?
+I container sono progettati per essere indipendenti dalla piattaforma
+
+Qual è il vantaggio principale dell'utilizzo dei decoratori?
+Modificare facilmente il comportamento delle funzioni senza modificarne il codice
+
+Quale problema comune si verifica quando si dimentica di chiudere un file in Python?
+Memory Leak
+
+Qual è la soluzione per proteggere il conteggio dei riferimenti in un ambiente multi-thread?
+Aggiungere lock a tutte le strutture dati condivise
+
+Cosa include un container?
+Codice, runtime, strumenti di sistema e librerie
+
+Come si avvia un nuovo thread in Python?
+Creando un'istanza di Thread e chiamando .start()
+
+Qual è la differenza tra multiprocessing e threading in Python?
+Multiprocessing crea processi separati con la propria memoria, mentre threading crea thread all'interno dello stesso processo con memoria condivisa
+
+Cosa rappresenta un file in un sistema operativo moderno?
+Un insieme contiguo di byte utilizzati per memorizzare dati
+
+Cosa fa il comando "docker run mytesting" ?
+Esegue il contenitore basato sull'immagine mytesting
+
+Cosa fa il comando "WORKDIR /app" in un Dockerfile?
+Cambia la directory di lavoro nel container a /app
+
+Cosa significa che i container sono isolati?
+Ogni container esegue un'applicazione e le sue dipendenze senza interferire con altri container
+
+Cos'è Docker?
+Uno strumento per creare e gestire container
+
+Qual è la differenza tra una funzione con parentesi e una funzione senza parentesi passata come argomento?
+La funzione con parentesi viene eseguita, mentre quella senza parentesi viene passata come referenza
+
+Qual è l'effetto del GIL su un programma CPU-bound?
+Limita le prestazioni a un singolo core della CPU
+
+Come si chiama il processo di avvolgere una funzione con un decoratore?
+Decorazione
+
+Quale eccezione viene sollevata quando un'operazione di I/O fallisce?
+IOError
+
+Quale comando della libreria multiprocessing permette di creare un nuovo processo?
+Process()
+
+Quale metodo viene utilizzato per avviare un gruppo di thread con ThreadPoolExecutor?
+.map()
+
+Quali sono i due principali framework per unit test in Python?
+unittest e PyTest
+
+Cosa succede se si passa una funzione con le parentesi come argomento a un'altra funzione?
+La funzione viene eseguita immediatamente e viene passato il valore ritornato
+
+Quale libreria Python è utilizzata per il multiprocessing?
+multiprocess
+
+Cosa rappresenta il metodo __exit__ di un context manager in Python?
+Il metodo chiamato quando il flusso di esecuzione esce dal blocco with, indipendentemente dal fatto che si sia verificata un'eccezione o meno
+
+Quali sono le tre parti principali che compongono un file su sistemi moderni?
+Header,Data,EOF(End Of File)
+
+Qual è il principale vantaggio di utilizzare le funzioni come oggetti di prima classe?
+Permette di passare, restituire e assegnare funzioni come variabili
+
+Cos'è una macchina virtuale (VM)?
+Un ambiente simulato creato tramite virtualizzazione
+
+Qual è la differenza principale tra un thread e un processo?
+Un thread è un flusso di esecuzione separato all'interno di un processo; un processo è un'istanza di un programma in esecuzione
+
+In quale scenario i thread sono particolarmente utili?
+Quando i compiti attendono eventi esterni
+
+Come si può far sì che il processo principale attenda la fine dei processi figli?
+Usando il metodo join
+
+Quale modulo deve contenere una directory per essere considerata importabile per i test?
+__init__.py
+
+Come si solleva un'eccezione con un messaggio personalizzato?
+raise Exception('messaggio')
+
+Quale dei seguenti non è un esempio di utilizzo dei decoratori?
+Aumentare la velocità di esecuzione delle funzioni
+
+Quale comando esegue una singola funzione di test all'interno di un file di test con unittest?
+python -m unittest -v nome_file.nome_funzione
+
+Quale parola chiave viene utilizzata in Python per sollevare un'eccezione?
+raise
+
+Quale metodo della classe Process consente di attendere la terminazione di un processo figlio?
+join()
+
+In Python, cosa significa che le funzioni sono oggetti di prima classe?
+Possono essere passate e utilizzate come argomenti, proprio come qualsiasi altro oggetto
+
+Qual è lo scopo di un decoratore in Python?
+Modificare il comportamento di una funzione
+
+Quale metodo di lettura legge tutte le linee di un file e le mette in una lista?
+readlines()
+
+Cosa rappresenta un programma I/O-bound?
+Un programma che attende input/output
+
+Quale simbolo viene utilizzato per applicare un decoratore a una funzione?
+@
+
+Come si specifica un messaggio personalizzato in un'asserzione?
+assert condizione, 'messaggio'
+
+Quale delle seguenti non è una caratteristica delle funzioni in Python?
+Possono essere utilizzate solo come decoratori
+
+Qual è la classe base utilizzata per creare test case in unittest?
+TestCase
+
+Perché il GIL è considerato un problema?
+Perché limita le prestazioni dei programmi multi-thread
+
+Che cosa si intende per overhead in un contesto di multiprocessing?
+Il costo aggiuntivo in termini di risorse computazionali per gestire i processi
+
+Cosa succede se si lancia un'asserzione con una condizione falsa senza fornire un messaggio?
+Viene sollevata un'AssertionError senza messaggio
+
+Qual è il metodo alternativo per ottenere l'esecuzione parallela in Python senza i limiti del GIL?
+Utilizzare multiprocessing
+
+Qual è il problema principale del GIL?
+Può essere un collo di bottiglia per le prestazioni in programmi multi-thread
+
+Quale modulo in Python fornisce funzioni per lavorare con il sistema operativo, inclusa la gestione dei file?
+os
+
+Quale tecnologia permette di creare ambienti simulati su una singola macchina fisica?
+Virtualizzazione
+
+Quale modulo include ThreadPoolExecutor?
+concurrent.futures
+
+Qual è il vantaggio principale dell'uso del multiprocessing rispetto al threading per compiti CPU-bound?
+Il multiprocessing può sfruttare più core del processore
+
+Qual è lo scopo del metodo start() nella libreria multiprocessing?
+Avviare un nuovo processo
+
+Quale metodo Python utilizza per la gestione della memoria?
+Reference counting
+
+Quale funzione utilizza Python per il conteggio dei riferimenti?
+sys.getrefcount()
+
+Quale tipo di eccezione viene sollevata se si tenta di aprire un file che non esiste in modalità read?
+FileNotFoundError
+
+Cos'è un'asserzione (assert) in Python?
+Una parola chiave di python che verifica se una condizione/valore è vera o falsa
+
+Quale clausola si utilizza per eseguire il codice solo se non ci sono eccezioni?
+else
+
+Cosa fa l'istruzione "COPY . /app" in un Dockerfile?
+Copia i contenuti della directory corrente nella directory /app all'interno del container
+
+Quale comando permette di visualizzare informazioni dettagliate sui test eseguiti con unittest?
+python -m unittest -v
+
+Quale clausola viene utilizzata per eseguire azioni di pulizia dopo l'esecuzione del codice?
+finally
+
+Qual è lo scopo del blocco try in Python?
+Tentare di eseguire il codice che potrebbe generare un'eccezione
+
+Quale carattere speciale indica la fine di un file?
+EOF
+
+Cosa permette di fare la funzione wrapper() all'interno di un decoratore?
+Avvolge la funzione originale e ne modifica il comportamento
+
+Come si specifica una clausola except che cattura solo l'eccezione TypeError?
+except e: TypeError
+
+Quale metodo viene utilizzato per assicurarsi che un file venga chiuso correttamente, anche in caso di errore?
+with statement
+
+Quale eccezione viene sollevata quando un'operazione aritmetica non valida viene eseguita?
+MathError
+
+Quale metodo viene utilizzato per verificare l'uguaglianza in unittest?
+assertEqual
+
+Qual è uno dei benefici della rapida distribuzione dei container?
+Scalabilità
+
+Qual è lo scopo della clausola finally in un blocco try-except?
+Eseguire il codice di pulizia indipendentemente dal risultato del blocco try
+
+Quale comando esegue un singolo test case in unittest?
+python -m unittest nome_file.TestNome
+
+Cosa significa che Python tratta le funzioni come first-class objects?
+Le funzioni possono essere passate come argomenti e restituite da altre funzioni
+
+Qual è la funzione in Python utilizzata per aprire un file?
+open()
+
+Cosa succede alla fine del blocco with quando si utilizza ThreadPoolExecutor?
+Esegue un .join() su ciascuno dei thread nel pool
+
+Quale libreria standard Python fornisce il supporto per i thread?
+threading
+
+Qual è un esempio di programma che potrebbe beneficiare dell'uso dei thread?
+Un programma che non richiede attesa
+
+Perché è consigliato utilizzare ThreadPoolExecutor come context manager?
+Per assicurarsi che i thread vengano uniti e chiusi correttamente
+
+Quale funzione viene chiamata per chiudere un file aperto in Python?
+close()
+
+Quale blocco di codice viene utilizzato in Python per gestire le eccezioni?
+try-except
+
+Quale parola chiave viene utilizzata per definire una funzione in Python?
+def
+
+Qual è il metodo consigliato per aprire e chiudere file in Python per garantire un codice più pulito?
+with statement
+
+Cos'è un Dockerfile?
+Un file con le istruzioni per costruire un'immagine Docker
+
+Qual è un potenziale problema dell'aggiunta di lock a tutte le strutture dati condivise?
+Deadlock
+
+Quale carattere viene utilizzato per ottenere una nuova linea durante la scrittura su un file?
+\n
+
+Qual è il metodo utilizzato per scrivere una stringa in un file?
+write()
+
+Qual è il comando utilizzato per eseguire tutti i test in una directory in Python?
+python -m unittest
+
+Qual è il vantaggio dell'utilizzo del GIL rispetto all'aggiunta di lock a tutte le strutture dati?
+Previene i deadlock
+
+Qual è la funzione di ThreadPoolExecutor?
+Gestire un pool di thread
+
+Qual è l'output di assert 1 > 0 se la condizione è vera?
+Nessun output
+
+Come si può catturare qualsiasi eccezione generica?
+except Exception as e
+
+Qual è la differenza tra un'asserzione e un'eccezione?
+Un'asserzione verifica una condizione, un'eccezione gestisce errori
+
+Qual è l'effetto del GIL sui programmi multithreaded in Python?
+Limita l'utilizzo effettivo dei threads ai programmi I/O Bounded
+
+Cosa rappresenta il metodo __enter__ di un context manager in Python?
+Il metodo chiamato quando il flusso di esecuzione entra nel blocco with
+
+Quale eccezione viene sollevata quando si accede a una variabile non definita?
+NameError
+
+Qual è il metodo utilizzato per confrontare se due valori non sono uguali in unittest?
+AssertNotEqual
+
+Cosa significa che un container è "standalone"?
+Può essere eseguito indipendentemente su qualsiasi sistema che supporti il runtime dei container
+
+Qual è il comando per costruire un'immagine Docker da un Dockerfile?
+docker Build
+
+Quale argomento posizionale aggiuntivo viene comunemente utilizzato con la funzione open() per specificare come si desidera aprire il file?
+mode
+
+Cosa può causare un race condition nella gestione della memoria?
+Due thread che modificano il conteggio dei riferimenti simultaneamente
+
+Qual è la classe base per la maggior parte delle eccezioni incorporate in Python?
+Exception
+
+Come si esegue un singolo file di test con unittest?
+python -m unittest -v nome_file
+
+Qual è la modalità di apertura di default per la funzione open() in Python?
+read-only
+
+Qual è la funzione di un decoratore in Python?
+È una funzione che avvolge un'altra funzione, modificandone il comportamento
+
+
+
+
