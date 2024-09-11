@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuto Edwin Enwere</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0; /* Rimuove il padding predefinito */
+            font-family: Arial, sans-serif;
+            color: white; /* Imposta il colore del testo a bianco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden; /* Nasconde eventuali scrollbar */
+            position: relative;
+        }
+
+        .background-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Adatta l'immagine per coprire tutto lo sfondo senza distorsioni */
+            z-index: -1; /* Mette l'immagine dietro al contenuto */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1; /* Assicura che il contenuto sia sopra l'immagine di sfondo */
+            width: 100%; /* Larghezza del contenuto a tutta larghezza */
+            max-width: 1200px; /* Larghezza massima del contenuto, modificabile se necessario */
+            box-sizing: border-box; /* Include il padding e il bordo nella larghezza totale */
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0; /* Rimuove il margine predefinito */
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 10px auto;
+            line-height: 1.6;
+            width: 90%; /* Larghezza del paragrafo, modificabile */
+            max-width: 1000px; /* Larghezza massima del paragrafo */
+            box-sizing: border-box; /* Include il padding e il bordo nella larghezza totale */
+        }
+
+        .highlight {
+            color: #f8ce13;
+        }
+
+        .links-container {
+            display: flex;
+            justify-content: space-between; /* Distribuisce lo spazio tra i link */
+            margin-top: 20px; /* Spazio sopra i link */
+            width: 100%; /* Larghezza del contenitore dei link */
+            max-width: 1000px; /* Larghezza massima del contenitore dei link */
+            box-sizing: border-box; /* Include il padding e il bordo nella larghezza totale */
+        }
+
+        .links-container a {
+            color: #f8ce13; /* Colore dei link */
+            text-decoration: none; /* Rimuove la sottolineatura dai link */
+            font-family: Calibri, sans-serif; /* Imposta il font su Calibri */
+            font-size: 0.9em; /* Font più piccolo */
+            font-weight: normal; /* Font normale per i link */
+            padding: 5px; /* Spazio interno ai link */
+        }
+
+        .links-container a:hover {
+            text-decoration: underline; /* Aggiunge sottolineatura al passaggio del mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <img src="Senza_titolo.jpeg" alt="Background Image" class="background-img">
+
+    <div class="content">
+        <h1>Benvenuto Edwin Enwere!</h1>
+        <p>Siamo entusiasti di averti nella nostra comunità!</p>
+
+        <p>Informazioni Generali</p>
+        <p><span class="highlight">Edwin Enwere</span> è nato il 30/06/2002 e cresciuto nel quartiere Montagnola di Roma. Ha frequentato il liceo scientifico tradizionale, uscendone nel 2022 con 70/100. Dopo vari indecisioni su quale università frequentare, si iscrisse alla facoltà di Ingegneria Informatica di Roma Tre, frequentandola per un anno per poi lasciare gli studi per qualche mese. Durante il Settembre del 2023 riprese gli studi iscrivendosi all'ITCA Accademy frequentando, tuttora, il corso di Cyber Security.</p>
+        
+        <!-- Contenitore per i link -->
+        <div class="links-container">
+            <a href="competenze.html">Vai a Competenze</a>
+            <a href="what_about_me.html">Vai a What about me</a>
+        </div>
+    </div>
+
+</body>
+</html>
