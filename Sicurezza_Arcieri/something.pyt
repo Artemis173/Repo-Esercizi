@@ -1,10 +1,10 @@
-from Crypto.    Cipher import AES
+from Crypto.Cipher import AES
 import base64
 
 def pad(text):
     while len(text) % 16 != 0:
-    text += ' '
-    return text
+        text += ' '
+        return text
 
 def encrypt(plain_text, key):
     cipher = AES.new(pad(key).encode('utf-8'), AES.MODE_ECB)
